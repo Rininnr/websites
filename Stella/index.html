@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>STELLA am Naschmarkt · Frühstück, Küche & Bar in Wien</title>
+<meta name="description" content="STELLA am Naschmarkt, Stand 332, 1060 Wien. Frühstück, Wiener und internationale Küche, Bier vom Fass und Cocktails. Täglich geöffnet, Reservierung per Telefon.">
+<meta name="theme-color" content="#14183a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2314183a'/%3E%3Cpath d='M50 14l10 26 28 2-22 17 8 27-24-15-24 15 8-27-22-17 28-2z' fill='%23f4b942'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"STELLA am Naschmarkt","telephone":"+43676843353203","email":"office@stella-lokal.at","servesCuisine":["Wiener Küche","International","Frühstück"],"priceRange":"€€",
+"address":{"@type":"PostalAddress","streetAddress":"Naschmarkt Stand 332 (gegenüber Linke Wienzeile 16)","postalCode":"1060","addressLocality":"Wien","addressCountry":"AT"},
+"geo":{"@type":"GeoCoordinates","latitude":48.198629,"longitude":16.363371},
+"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"08:30","closes":"23:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"10:00","closes":"21:00"}],
+"acceptsReservations":"Telefonisch","url":"https://www.stella-lokal.at/"}
+</script>
+<style>
+:root{
+  /* Farb-Tokens */
+  --night:#14183a; --night-2:#1e2452; --night-3:#2c3478;
+  --gold:#f4b942; --gold-2:#ffd27a; --accent:#c2410c; --mint:#4fc3a1;
+  --surface:#fff8ec; --surface-2:#fff; --surface-3:#ffeccc;
+  --on-surface:#1b1d2e; --muted:#555a78; --line:#eadcc2;
+  --on-night:#fff; --on-night-muted:#c4c8ee;
+  /* Form & Bewegung */
+  --r-sm:12px; --r:22px; --r-lg:32px;
+  --shadow-1:0 6px 18px -10px rgba(20,24,58,.35); --shadow-2:0 24px 50px -24px rgba(20,24,58,.45);
+  --ease-out:cubic-bezier(.22,1,.36,1); --t-fast:.18s; --t:.35s; --t-slow:.8s;
+  --z-header:20; --z-bar:40;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px;-webkit-text-size-adjust:100%}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16px;background:var(--surface);color:var(--on-surface);line-height:1.65;-webkit-font-smoothing:antialiased;padding-bottom:76px;overflow-x:hidden}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit}
+.icon{width:20px;height:20px;flex:0 0 auto;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:8px}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--gold);color:var(--night);padding:10px 16px;border-radius:10px;font-weight:700;text-decoration:none}
+.skip:focus{top:12px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.serif{font-family:Fraunces,Georgia,serif}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:12px}
+.eyebrow svg{width:14px;height:14px;fill:var(--gold);stroke:none}
+.on-night .eyebrow{color:var(--gold-2)}
+h2.title{font-family:Fraunces,Georgia,serif;font-size:clamp(2rem,5vw,3.1rem);line-height:1.08;font-weight:800;text-wrap:balance}
+.lead{color:var(--muted);font-size:1.08rem;margin-top:14px;max-width:620px}
+.ph{background:repeating-linear-gradient(45deg,rgba(244,185,66,.18) 0 10px,rgba(244,185,66,.07) 10px 20px);border:1.5px dashed #c98a12;border-radius:8px;padding:0 6px;font-weight:600}
+.ph::before{content:"✎ "}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;padding:14px 24px;border-radius:999px;font-weight:600;font-size:1rem;transition:transform var(--t-fast) var(--ease-out),background var(--t-fast),box-shadow var(--t-fast);border:0;cursor:pointer;min-height:50px;touch-action:manipulation}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:scale(.97)}
+.btn.gold{background:var(--gold);color:var(--night);box-shadow:0 12px 26px -12px rgba(244,185,66,.9)}
+.btn.gold:hover{background:var(--gold-2)}
+.btn.ghost{border:1.5px solid rgba(255,255,255,.4);color:#fff}
+.btn.ghost:hover{background:rgba(255,255,255,.1)}
+.btn.dark{background:var(--night);color:#fff}
+.btn.dark:hover{background:var(--night-2)}
+
+/* Header */
+header{position:sticky;top:0;z-index:var(--z-header);background:rgba(20,24,58,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);color:#fff;border-bottom:1px solid rgba(255,255,255,.06)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:Fraunces,serif;font-weight:800;font-size:1.35rem;letter-spacing:.06em}
+.logo svg{width:30px;height:30px}
+.logo small{display:block;font-family:Inter,sans-serif;font-weight:600;font-size:.62rem;letter-spacing:.24em;color:var(--gold-2);margin-top:-4px}
+.menu{display:flex;gap:6px;list-style:none;font-size:.9rem;font-weight:500;align-items:center}
+.menu a{display:block;text-decoration:none;color:var(--on-night-muted);padding:10px 14px;border-radius:999px;transition:color var(--t-fast),background var(--t-fast)}
+.menu a:hover,.menu a[aria-current="true"]{color:#fff;background:rgba(255,255,255,.08)}
+.menu .call{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--night);font-weight:700;margin-left:8px}
+.menu .call:hover{color:var(--night);background:var(--gold-2)}
+.burger{display:none;background:none;border:0;cursor:pointer;width:48px;height:48px;color:#fff;border-radius:12px}
+.burger span{display:block;width:22px;height:2px;background:currentColor;margin:5px auto;border-radius:2px;transition:transform var(--t-fast),opacity var(--t-fast)}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* Hero: Floating-Hero-Muster nach 21st "Floating Food Hero" */
+.hero{position:relative;overflow:hidden;background:radial-gradient(120% 90% at 50% 0%,var(--night-3),var(--night) 62%);color:#fff;min-height:calc(100dvh - 68px);display:flex;align-items:center;isolation:isolate}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.3;z-index:-2}
+.swirl{position:absolute;color:rgba(244,185,66,.16);z-index:-1;pointer-events:none}
+.swirl.a{top:0;left:0;transform:translate(-30%,-30%)}
+.swirl.b{bottom:0;right:0;transform:translate(25%,25%)}
+.stars{position:absolute;inset:0;pointer-events:none;z-index:-1}
+.stars i{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;opacity:.6;animation:tw 3.5s ease-in-out infinite}
+@keyframes tw{50%{opacity:.15;transform:scale(.6)}}
+.floaters{position:absolute;inset:0;pointer-events:none}
+.floater{position:absolute;width:clamp(76px,9vw,124px);aspect-ratio:1;border-radius:28px;display:grid;place-items:center;background:linear-gradient(150deg,rgba(255,255,255,.14),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);box-shadow:0 20px 40px -20px rgba(0,0,0,.6);animation:float 7s var(--ease-out) infinite alternate;color:var(--gold-2)}
+.floater svg{width:44%;height:44%;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.floater span{position:absolute;bottom:-12px;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--gold);color:var(--night);padding:3px 10px;border-radius:999px;white-space:nowrap}
+.f1{top:14%;left:7%;transform:rotate(-8deg)}
+.f2{top:12%;right:8%;animation-delay:-2s}
+.f3{bottom:16%;left:10%;animation-delay:-4s}
+.f4{bottom:14%;right:9%;animation-delay:-1s}
+@keyframes float{from{translate:0 0}to{translate:0 -16px}}
+.hero-inner{position:relative;text-align:center;max-width:760px;margin:0 auto;padding:72px 20px 84px}
+.status{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);padding:8px 16px;border-radius:999px;font-size:.9rem;margin-bottom:24px}
+.status .dot{width:9px;height:9px;border-radius:50%;background:#9aa0c8}
+.status.open .dot{background:var(--mint);box-shadow:0 0 0 0 rgba(79,195,161,.7);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(79,195,161,0)}}
+.hero h1{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:clamp(2.9rem,9vw,6rem);line-height:.98;letter-spacing:-.01em}
+.hero h1 em{font-style:normal;color:var(--gold);display:inline-flex;align-items:center;gap:.12em}
+.hero h1 em svg{width:.62em;height:.62em;fill:var(--gold);animation:spin 14s linear infinite}
+@keyframes spin{to{rotate:360deg}}
+.hero p.sub{max-width:560px;margin:22px auto 0;color:var(--on-night-muted);font-size:1.15rem}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px;justify-content:center}
+.trust{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 22px;margin-top:30px;font-size:.9rem;color:var(--on-night-muted)}
+.trust span{display:inline-flex;align-items:center;gap:8px}
+.trust .icon{width:18px;height:18px;color:var(--gold-2)}
+
+/* Laufband */
+.strip{background:var(--gold);color:var(--night);overflow:hidden;white-space:nowrap;padding:14px 0;font-family:Fraunces,serif;font-weight:800;font-size:1.08rem}
+.strip div{display:inline-flex;animation:slide 34s linear infinite}
+.strip:hover div{animation-play-state:paused}
+.strip span{margin:0 22px;display:inline-flex;align-items:center;gap:22px}
+.strip span::after{content:"";width:10px;height:10px;background:var(--night);clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+section{padding:96px 0}
+
+/* Bento: Raster nach 21st "Bento Grid" (6 Spalten) */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-top:44px}
+.cell{position:relative;overflow:hidden;background:var(--surface-2);border:1px solid var(--line);border-radius:var(--r);padding:28px;transition:transform var(--t) var(--ease-out),box-shadow var(--t)}
+.cell:hover{transform:translateY(-4px);box-shadow:var(--shadow-2)}
+.cell h3{font-family:Fraunces,serif;font-size:1.35rem;margin:14px 0 6px;line-height:1.2}
+.cell p{color:var(--muted);font-size:.98rem;max-width:42ch}
+.cell .ic{width:48px;height:48px;border-radius:14px;background:var(--night);color:var(--gold);display:grid;place-items:center}
+.cell .ic .icon{width:24px;height:24px}
+.c-wide{grid-column:span 4}
+.c-tall{grid-column:span 2;grid-row:span 2}
+.c-2{grid-column:span 2}
+.c-3{grid-column:span 3}
+.c-dark{background:var(--night);color:#fff;border-color:var(--night)}
+.c-dark p{color:var(--on-night-muted)}
+.c-dark .ic{background:var(--gold);color:var(--night)}
+.c-gold{background:linear-gradient(150deg,var(--gold-2),var(--gold));border-color:var(--gold)}
+.c-gold p{color:#4a3a12}
+.c-gold .ic{background:var(--night);color:var(--gold)}
+.clock{display:flex;align-items:baseline;gap:10px;margin-top:18px;font-family:Fraunces,serif}
+.clock b{font-size:3.2rem;line-height:1;color:var(--gold)}
+.clock small{font-family:Inter,sans-serif;color:var(--on-night-muted)}
+.big-num{font-family:Fraunces,serif;font-size:4.4rem;font-weight:800;line-height:1;color:var(--night);margin-top:18px}
+.cell .deco{position:absolute;right:-30px;bottom:-30px;width:150px;height:150px;fill:rgba(244,185,66,.12)}
+
+/* Speisekarte */
+.menu-sec{background:var(--night);color:#fff;position:relative;overflow:hidden}
+.menu-sec .lead{color:var(--on-night-muted)}
+.tabs{display:flex;gap:8px;margin-top:36px;flex-wrap:wrap}
+.tab{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.07);color:#e3e6fb;border:1px solid rgba(255,255,255,.14);padding:10px 18px;border-radius:999px;font-weight:600;font-size:.95rem;cursor:pointer;min-height:48px;transition:background var(--t-fast),color var(--t-fast)}
+.tab:hover{background:rgba(255,255,255,.13)}
+.tab[aria-selected="true"]{background:var(--gold);color:var(--night);border-color:var(--gold)}
+.tab .icon{width:18px;height:18px}
+.panel{margin-top:28px;display:grid;grid-template-columns:repeat(2,1fr);gap:4px 44px;animation:fade var(--t) var(--ease-out)}
+.panel[hidden]{display:none}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}}
+.dish{display:flex;align-items:baseline;gap:10px;padding:18px 0;border-bottom:1px dashed rgba(255,255,255,.16)}
+.dish b{font-family:Fraunces,serif;font-size:1.15rem;font-weight:600}
+.dish small{display:block;color:#b4b9e6;font-size:.92rem}
+.dish .fill{flex:1;border-bottom:1px dotted rgba(255,255,255,.28);transform:translateY(-4px);min-width:20px}
+.dish .pr{color:var(--gold);font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
+.dish .pr.ph{color:var(--gold-2);font-size:.85rem;border-color:var(--gold)}
+.note{margin-top:30px;padding:16px 20px;border-radius:14px;background:rgba(244,185,66,.1);border:1px dashed var(--gold);color:#ffe4a8;font-size:.94rem}
+
+/* Über uns */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about p{color:var(--muted);margin-top:16px;font-size:1.05rem}
+.quote{margin-top:26px;padding:20px 24px;border-left:4px solid var(--gold);background:var(--surface-2);border-radius:0 18px 18px 0;font-family:Fraunces,serif;font-size:1.3rem;box-shadow:var(--shadow-1)}
+.quote small{display:block;font-family:Inter,sans-serif;font-size:.85rem;color:var(--muted);margin-top:6px}
+.tile{aspect-ratio:4/5;border-radius:var(--r-lg);background:linear-gradient(160deg,#ff7a59,#e8506b 55%,var(--night-3));position:relative;overflow:hidden;display:grid;place-items:center;color:#fff;box-shadow:var(--shadow-2)}
+.tile::after{content:"STELLA";position:absolute;bottom:-.15em;left:-.05em;font-family:Fraunces,serif;font-weight:800;font-size:7rem;color:rgba(255,255,255,.12);letter-spacing:.04em}
+.tile.has-img::after{display:none}
+.tile img{width:100%;height:100%;object-fit:cover}
+.tile .ph-txt{font-weight:600;text-align:center;padding:20px}
+
+/* Galerie */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:38px}
+.g-item{aspect-ratio:1;border-radius:20px;overflow:hidden;background:#f3e7d1;display:grid;place-items:center;color:#7d6a45;font-weight:600;font-size:.95rem;border:1.5px dashed #d9bf8c}
+.g-item:has(img),.g-item:has(video),.g-item:has(iframe){border:0}
+.g-item img,.g-item video,.g-item iframe{width:100%;height:100%;object-fit:cover;border:0}
+
+/* Besuch */
+.visit{background:linear-gradient(180deg,var(--surface),var(--surface-3))}
+.visit-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;margin-top:40px}
+.card{background:var(--surface-2);border-radius:var(--r);padding:30px;box-shadow:var(--shadow-2)}
+.card h3{font-family:Fraunces,serif;font-size:1.4rem;margin-bottom:14px}
+.hours{list-style:none}
+.hours li{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+.hours li.today{font-weight:700;color:var(--night)}
+.hours li.today span:first-child::after{content:" · heute";color:var(--accent);font-weight:700;font-size:.85rem}
+.contact-list{list-style:none;display:grid;gap:12px}
+.contact-list a{display:flex;align-items:center;gap:14px;text-decoration:none;padding:14px;border-radius:16px;background:var(--surface);transition:background var(--t-fast);min-height:64px}
+.contact-list a:hover{background:#ffe9c2}
+.contact-list .i{width:46px;height:46px;border-radius:12px;background:var(--night);color:var(--gold);display:grid;place-items:center;flex:0 0 auto}
+.contact-list small{display:block;color:var(--muted);font-size:.85rem}
+.contact-list b{overflow-wrap:anywhere}
+.transit{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.transit span{display:inline-flex;align-items:center;gap:6px;font-size:.88rem;padding:7px 12px;border-radius:999px;background:var(--surface);border:1px solid var(--line)}
+.transit .icon{width:16px;height:16px;color:var(--accent)}
+.mapbox{margin-top:22px;border-radius:var(--r);overflow:hidden;background:var(--night);color:#fff;position:relative;min-height:280px;display:grid;place-items:center;text-align:center;padding:30px}
+.mapbox p{color:var(--on-night-muted);font-size:.94rem;margin:8px 0 18px;max-width:440px}
+.mapbox iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* Feiern CTA */
+.party{background:var(--night);color:#fff;border-radius:var(--r-lg);padding:48px;display:grid;grid-template-columns:1.3fr .7fr;gap:30px;align-items:center;position:relative;overflow:hidden}
+.party p{color:var(--on-night-muted);margin-top:12px;max-width:520px}
+.party .actions{display:flex;flex-direction:column;gap:12px}
+.party .deco{position:absolute;right:-60px;top:-60px;width:260px;height:260px;fill:rgba(244,185,66,.1)}
+
+/* Rechtliches */
+.legal{background:var(--surface-2);padding:72px 0}
+.legal details{border:1px solid var(--line);border-radius:18px;padding:0 22px;margin-top:14px;background:var(--surface)}
+.legal summary{cursor:pointer;padding:18px 0;font-family:Fraunces,serif;font-size:1.25rem;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center;min-height:56px}
+.legal summary::-webkit-details-marker{display:none}
+.legal summary .icon{transition:transform var(--t-fast);color:var(--accent)}
+.legal details[open] summary .icon{transform:rotate(45deg)}
+.legal .body{padding-bottom:22px;color:var(--muted);font-size:.96rem}
+.legal .body h4{color:var(--on-surface);margin:16px 0 4px;font-size:1rem}
+.legal .body p{margin-bottom:8px}
+
+footer{background:var(--night);color:var(--on-night-muted);padding:42px 0;font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center}
+footer a{color:#fff}
+
+/* Mobile Schnellleiste */
+.actionbar{position:fixed;left:0;right:0;bottom:0;z-index:var(--z-bar);display:grid;grid-template-columns:repeat(3,1fr);background:rgba(20,24,58,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:8px 10px calc(8px + env(safe-area-inset-bottom));gap:8px;border-top:1px solid rgba(255,255,255,.08)}
+.actionbar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;text-decoration:none;color:#fff;font-size:.78rem;font-weight:600;min-height:52px;border-radius:14px}
+.actionbar a:active{background:rgba(255,255,255,.08)}
+.actionbar a:first-child{background:var(--gold);color:var(--night)}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity var(--t-slow) var(--ease-out),transform var(--t-slow) var(--ease-out)}
+.reveal.in{opacity:1;transform:none}
+.bento .reveal:nth-child(2){transition-delay:.05s}.bento .reveal:nth-child(3){transition-delay:.1s}.bento .reveal:nth-child(4){transition-delay:.15s}.bento .reveal:nth-child(5){transition-delay:.2s}
+
+@media (min-width:901px){.actionbar{display:none}body{padding-bottom:0}}
+@media (max-width:1024px){.floater{opacity:.55}.f1,.f3{left:2%}.f2,.f4{right:2%}}
+@media (max-width:900px){
+  .menu{position:fixed;inset:68px 0 auto 0;flex-direction:column;gap:0;background:var(--night);padding:8px 20px 22px;transform:translateY(-130%);visibility:hidden;transition:transform var(--t) var(--ease-out),visibility 0s var(--t);align-items:stretch}
+  .menu.open{transform:none;visibility:visible;transition:transform var(--t) var(--ease-out)}
+  .menu li a{padding:16px 6px;border-radius:0;border-bottom:1px solid rgba(255,255,255,.08)}
+  .menu .call{justify-content:center;margin:16px 0 0;border-radius:999px;border:0}
+  .burger{display:block}
+  .floaters{display:none}
+  .about,.visit-grid,.party{grid-template-columns:1fr}
+  .bento{grid-template-columns:1fr 1fr}
+  .c-wide,.c-3{grid-column:span 2}
+  .c-tall,.c-2{grid-column:span 1;grid-row:auto}
+  .panel{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  section{padding:68px 0}
+  .party{padding:32px 24px}
+}
+@media (max-width:560px){.bento{grid-template-columns:1fr}.c-wide,.c-3,.c-tall,.c-2{grid-column:auto}.cell{padding:24px}.tab{flex:1 1 calc(50% - 8px);justify-content:center}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<!-- Icon-Set (Lucide-Stil, einheitlich 2px Strich) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></symbol>
+  <symbol id="i-sunrise" viewBox="0 0 24 24"><path d="M12 2v8M4.9 10.9l1.4 1.4M2 18h2M20 18h2M17.7 12.3l1.4-1.4M22 22H2M8 6l4-4 4 4M16 18a4 4 0 0 0-8 0"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+  <symbol id="i-tree" viewBox="0 0 24 24"><path d="M12 22v-7M9 22h6M12 3 6 13h12z"/></symbol>
+  <symbol id="i-party" viewBox="0 0 24 24"><path d="M5.8 11.3 2 22l10.7-3.8M4 3h.01M22 8h.01M15 2h.01M22 20h.01M22 2l-2.2.7a2.9 2.9 0 0 0-1.9 3.3c.2.9-.6 1.7-1.5 1.5a2.9 2.9 0 0 0-3.3 1.9L12.4 12"/><path d="M11 13c1.9 1.9 2.8 4.2 2 5-.8.8-3.1-.1-5-2s-2.8-4.2-2-5c.8-.8 3.1.1 5 2z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-coffee" viewBox="0 0 24 24"><path d="M17 8h1a4 4 0 1 1 0 8h-1M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4zM6 2v2M10 2v2M14 2v2"/></symbol>
+  <symbol id="i-utensils" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></symbol>
+  <symbol id="i-bowl" viewBox="0 0 24 24"><path d="M2 12h20a10 10 0 0 1-20 0zM7 21h10M9 8c0-2 2-2 2-4M13 8c0-2 2-2 2-4"/></symbol>
+  <symbol id="i-beer" viewBox="0 0 24 24"><path d="M17 11h1a3 3 0 0 1 0 6h-1M9 12v6M13 12v6M5 8h12v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2zM5 8a3 3 0 0 1 3-4 3 3 0 0 1 5 0 3 3 0 0 1 4 4"/></symbol>
+  <symbol id="i-martini" viewBox="0 0 24 24"><path d="M8 22h8M12 11v11M19 3 12 11 5 3z"/></symbol>
+  <symbol id="i-dog" viewBox="0 0 24 24"><path d="M10 5.2C10 3.6 8.7 2 7 2S4 3.6 4 5.2c0 .8.4 1.5 1 2l-2 7.5C3 16 4 17 5 17h1M14 5.2C14 3.6 15.3 2 17 2s3 1.6 3 3.2c0 .8-.4 1.5-1 2l2 7.5c0 1.3-1 2.3-2 2.3h-1M8 14v.5M16 14v.5M11.3 17h1.4L12 18z"/><path d="M6 17c0 2.8 2.7 5 6 5s6-2.2 6-5"/></symbol>
+  <symbol id="i-train" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16M12 3v8M8 19l-2 3M16 19l2 3M8 15h.01M16 15h.01"/></symbol>
+  <symbol id="i-access" viewBox="0 0 24 24"><circle cx="16" cy="4" r="1"/><path d="m18 19 1-7-6 1M5 8l3-3 5.5 3-2.4 3.5M4.2 14.5a5 5 0 0 0 6.9 5.3M13.8 17.5a5 5 0 0 0-5.3-6.9"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3 7 7.5.6-5.7 4.9 1.8 7.5L12 18l-6.6 4 1.8-7.5L1.5 9.6 9 9z"/></symbol>
+</svg>
+
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="STELLA am Naschmarkt, nach oben">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 6l12 30 32 2-25 20 9 32-28-18-28 18 9-32L6 38l32-2z" fill="#f4b942"/></svg>
+      <span>STELLA<small>AM NASCHMARKT</small></span>
+    </a>
+    <button class="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#karte">Speisekarte</a></li>
+      <li><a href="#lokal">Über uns</a></li>
+      <li><a href="#feiern">Feiern</a></li>
+      <li><a href="#besuch">Anfahrt & Zeiten</a></li>
+      <li><a class="call" href="tel:+43676843353203"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Tisch reservieren</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding:0" aria-labelledby="hero-title">
+  <svg class="swirl a" width="620" height="620" viewBox="0 0 600 600" fill="none" aria-hidden="true"><path d="M515 181C378 52 129 136 51 294-27 451 126 600 126 600" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  <svg class="swirl b" width="720" height="720" viewBox="0 0 700 700" fill="none" aria-hidden="true"><path d="M27 528c167 162 453 109 567-76C709 267 544 2 544 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  <div class="stars" id="stars" aria-hidden="true"></div>
+  <div class="floaters" aria-hidden="true">
+    <div class="floater f1"><svg><use href="#i-coffee"/></svg><span>Frühstück</span></div>
+    <div class="floater f2"><svg><use href="#i-bowl"/></svg><span>Wok</span></div>
+    <div class="floater f3"><svg><use href="#i-beer"/></svg><span>Vom Fass</span></div>
+    <div class="floater f4"><svg><use href="#i-martini"/></svg><span>Cocktails</span></div>
+  </div>
+  <div class="hero-inner" id="inhalt">
+    <div class="status" id="status" role="status"><span class="dot" aria-hidden="true"></span><span id="status-text">Öffnungszeiten werden geladen</span></div>
+    <h1 id="hero-title">Dein <em>Stern<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg></em><br>am Naschmarkt.</h1>
+    <p class="sub">Frühstück am Morgen, Wiener und internationale Küche zu Mittag, Bier vom Fass und Cocktails am Abend. Familiär geführt, mitten im Markttreiben.</p>
+    <div class="cta">
+      <a class="btn gold" href="tel:+43676843353203"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Jetzt Tisch reservieren</a>
+      <a class="btn ghost" href="#karte">Speisekarte ansehen<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="trust">
+      <span><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>Täglich geöffnet</span>
+      <span><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Stand 332</span>
+      <span><svg class="icon" aria-hidden="true"><use href="#i-dog"/></svg>Hunde willkommen</span>
+    </div>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true"><div>
+  <span>Frühstück</span><span>Wiener Küche</span><span>Wok</span><span>Sandwiches</span><span>Bier vom Fass</span><span>Cocktails</span><span>Gastgarten</span><span>Feiern bis 60 Personen</span>
+  <span>Frühstück</span><span>Wiener Küche</span><span>Wok</span><span>Sandwiches</span><span>Bier vom Fass</span><span>Cocktails</span><span>Gastgarten</span><span>Feiern bis 60 Personen</span>
+</div></div>
+
+<section aria-labelledby="warum">
+  <div class="wrap">
+    <span class="eyebrow"><svg aria-hidden="true"><use href="#i-star"/></svg>Warum STELLA</span>
+    <h2 class="title" id="warum">Ein Ort für den ganzen Tag.</h2>
+    <div class="bento">
+      <div class="cell c-wide c-dark reveal">
+        <div class="ic"><svg class="icon" aria-hidden="true"><use href="#i-sunrise"/></svg></div>
+        <h3>Früh offen, spät noch da</h3>
+        <p>Montag bis Samstag von 8:30 bis 23:00 Uhr. Vom ersten Kaffee bis zum letzten Cocktail.</p>
+        <div class="clock"><b>8:30</b><small>bis</small><b>23:00</b></div>
+        <svg class="deco" aria-hidden="true"><use href="#i-star"/></svg>
+      </div>
+      <div class="cell c-tall c-gold reveal">
+        <div class="ic"><svg class="icon" aria-hidden="true"><use href="#i-party"/></svg></div>
+        <h3>Feiern bei uns</h3>
+        <p>Geburtstag, Firmenfeier oder Treffen mit Freunden.</p>
+        <div class="big-num">60</div>
+        <p>Plätze für deine Feier</p>
+      </div>
+      <div class="cell c-2 reveal">
+        <div class="ic"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg></div>
+        <h3>Küche aus aller Welt</h3>
+        <p>Wiener Klassiker neben Wok und Sandwiches. Sonderwünsche machen wir gern.</p>
+      </div>
+      <div class="cell c-2 reveal">
+        <div class="ic"><svg class="icon" aria-hidden="true"><use href="#i-tree"/></svg></div>
+        <h3>Gastgarten</h3>
+        <p>Draußen sitzen, Leute schauen, Naschmarkt spüren. Hunde sind willkommen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-sec on-night" id="karte" aria-labelledby="karte-title">
+  <div class="wrap">
+    <span class="eyebrow"><svg aria-hidden="true"><use href="#i-star"/></svg>Genießen</span>
+    <h2 class="title" id="karte-title">Unsere Speisekarte</h2>
+    <p class="lead">Ein Auszug aus unserer Karte. Frag gerne nach dem Tagesgericht, das wechselt je nach Marktangebot.</p>
+    <div class="tabs" role="tablist" aria-label="Kategorien">
+      <button class="tab" role="tab" aria-selected="true" aria-controls="p1" id="t1"><svg class="icon" aria-hidden="true"><use href="#i-coffee"/></svg>Frühstück</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p2" id="t2" tabindex="-1"><svg class="icon" aria-hidden="true"><use href="#i-utensils"/></svg>Mittag & Abend</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p3" id="t3" tabindex="-1"><svg class="icon" aria-hidden="true"><use href="#i-bowl"/></svg>Wok & Sandwiches</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p4" id="t4" tabindex="-1"><svg class="icon" aria-hidden="true"><use href="#i-martini"/></svg>Getränke & Bar</button>
+    </div>
+
+    <div class="panel" role="tabpanel" id="p1" aria-labelledby="t1" tabindex="0">
+      <div class="dish"><div><b>Wiener Frühstück</b><small>Gebäck, Butter, Marmelade, Kaffee oder Tee</small></div><span class="fill"></span><span class="pr ph">€ Preis</span></div>
+      <div class="dish"><div><b>STELLA Frühstück</b><small>Eierspeise, Schinken, Käse, Gebäck, Orangensaft</small></div><span class="fill"></span><span class="pr ph">€ Preis</span></div>
+      <div class="dish"><div><b>Ham & Eggs</b><small>Zwei Spiegeleier mit Schinken und Toast</small></div><span class="fill"></span><span class="pr ph">€ Preis</span></div>
+      <div class="dish"><div><b>Avocado Brot</b><small>Sauerteigbrot, Avocado, Ei, Kresse</small></div><span class="fill"></span><span class="pr ph">€ Preis</span></div>
+    </div>
+    <div class="panel" role="tabpanel" id="p2" aria-labelledby="t2" tabindex="0" hidden>
+      <div class="dish"><div><b>Wiener Schnitzel</b><small>Mit Erdäpfelsalat und Preiselbeeren</small></div><span class="fill"></span><span class="pr ph">€ Preis</span></div>
+      <div class="dish"><div><b>Tafelspitz</b><small>Mit Rösti, Apfelkren und Schnittlauchsauce</small></div><span class="fill"></span><span class="pr ph">€ Preis</span></div>
+      <div class="dish"><div><b>Tagesgericht</b><small>Frisch vom Markt, frag unser Team</small></div><span class="fill"></span><span class="pr ph">€ Preis</span></div>
+      <div class="dish"><div><b>Salat der Saison</b><small>Mit Hendlstreifen oder Schafkäse</small></div><span class="fill"></span><span class="pr ph">€ Preis</span></div>
+    </div>
+    <div class="panel" role="tabpanel" id="p3" aria-labelledby="t3" tabindex="0" hidden>
+      <div class="dish"><div><b>Wok Gemüse</b><small>Mit Reis oder Nudeln, vegan möglich</small></div><span class="fill"></span><span class="pr ph">€ Preis</span></div>
+      <div class="dish"><div><b>Wok mit Hendl</b><small>Knackiges Gemüse, Sojasauce, Reis</small></div><span class="fill"></span><span class="pr ph">€ Preis</span></div>
+      <div class="dish"><div><b>Club Sandwich</b><small>Hendl, Speck, Ei, Salat, Pommes</small></div><span class="fill"></span><span class="pr ph">€ Preis</span></div>
+      <div class="dish"><div><b>Veggie Sandwich</b><small>Gegrilltes Gemüse, Hummus, Rucola</small></div><span class="fill"></span><span class="pr ph">€ Preis</span></div>
+    </div>
+    <div class="panel" role="tabpanel" id="p4" aria-labelledby="t4" tabindex="0" hidden>
+      <div class="dish"><div><b>Grieskirchner vom Fass</b><small>0,3 l / 0,5 l</small></div><span class="fill"></span><span class="pr ph">€ Preis</span></div>
+      <div class="dish"><div><b>Pils vom Fass</b><small>0,3 l / 0,5 l</small></div><span class="fill"></span><span class="pr ph">€ Preis</span></div>
+      <div class="dish"><div><b>Cocktail des Abends</b><small>Happy Hour, Uhrzeit bitte prüfen</small></div><span class="fill"></span><span class="pr ph">€ Preis</span></div>
+      <div class="dish"><div><b>Melange</b><small>Wiener Kaffeeklassiker</small></div><span class="fill"></span><span class="pr ph">€ Preis</span></div>
+    </div>
+
+    <p class="note">✎ Platzhalter: Gerichte und Preise sind Beispiele und müssen mit der aktuellen Karte von STELLA ersetzt werden. Die bisherige Karte liegt nur als Fotos vor.</p>
+  </div>
+</section>
+
+<section id="lokal" aria-labelledby="lokal-title">
+  <div class="wrap about">
+    <div class="reveal">
+      <span class="eyebrow"><svg aria-hidden="true"><use href="#i-star"/></svg>Über uns</span>
+      <h2 class="title" id="lokal-title">Familiär geführt, mit viel Herz.</h2>
+      <p>STELLA ist ein Familienbetrieb mitten am Wiener Naschmarkt. Unsere Einrichtung verbindet regionalen Stil mit modernen Akzenten, die Stimmung ist ungezwungen und herzlich.</p>
+      <p>Unser Team kocht mit Freude und geht gerne auf deine Wünsche ein, ob beim Essen oder bei den Getränken. Unser Inhaber <span class="ph">Name/Begrüßung prüfen</span> freut sich auf deinen Besuch.</p>
+      <blockquote class="quote">„Sind unsere Gäste zufrieden, sind wir es auch.“<small>Unser Leitsatz</small></blockquote>
+    </div>
+    <div class="tile reveal" id="about-tile"><span class="ph-txt">Foto vom Lokal oder Team</span></div>
+  </div>
+</section>
+
+<section id="galerie" style="padding-top:0" aria-labelledby="galerie-title">
+  <div class="wrap">
+    <span class="eyebrow"><svg aria-hidden="true"><use href="#i-star"/></svg>Eindrücke</span>
+    <h2 class="title" id="galerie-title">So schmeckt STELLA.</h2>
+    <div class="gallery" id="gallery"></div>
+  </div>
+</section>
+
+<section id="feiern" style="padding-top:0" aria-labelledby="feiern-title">
+  <div class="wrap">
+    <div class="party reveal">
+      <svg class="deco" aria-hidden="true"><use href="#i-star"/></svg>
+      <div>
+        <span class="eyebrow" style="color:var(--gold-2)"><svg aria-hidden="true"><use href="#i-star"/></svg>Feiern & Gruppen</span>
+        <h2 class="title" id="feiern-title">Dein Fest, unser Stern.</h2>
+        <p>Geburtstag, Firmenfeier oder Stammtisch: Bei uns finden bis zu 60 Gäste Platz. Ruf an oder schreib uns, wir planen Essen und Getränke gemeinsam mit dir.</p>
+      </div>
+      <div class="actions">
+        <a class="btn gold" href="tel:+43676843353203"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Anrufen</a>
+        <a class="btn ghost" href="mailto:office@stella-lokal.at?subject=Anfrage%20Feier%20bei%20STELLA"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>Anfrage per E-Mail</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="besuch" aria-labelledby="besuch-title">
+  <div class="wrap">
+    <span class="eyebrow"><svg aria-hidden="true"><use href="#i-star"/></svg>Besuch & Reservierung</span>
+    <h2 class="title" id="besuch-title">Komm vorbei, wir halten dir einen Platz frei.</h2>
+    <p class="lead">Reservierungen nehmen wir ausschließlich telefonisch entgegen. Einfach antippen und anrufen.</p>
+    <div class="visit-grid">
+      <div class="card">
+        <h3>Kontakt</h3>
+        <ul class="contact-list">
+          <li><a href="tel:+43676843353203"><span class="i"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span><span><b>+43 676 843 353 203</b><small>Anrufen und reservieren</small></span></a></li>
+          <li><a href="https://www.google.com/maps/dir/?api=1&destination=48.198629,16.363371" target="_blank" rel="noopener"><span class="i"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span><span><b>Naschmarkt, Stand 332</b><small>gegenüber Linke Wienzeile 16, 1060 Wien · Route starten</small></span></a></li>
+          <li><a href="mailto:office@stella-lokal.at"><span class="i"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span><span><b>office@stella-lokal.at</b><small>Für Anfragen zu Feiern und Gruppen</small></span></a></li>
+        </ul>
+        <div class="transit">
+          <span><svg class="icon" aria-hidden="true"><use href="#i-train"/></svg>U4 Kettenbrückengasse</span>
+          <span><svg class="icon" aria-hidden="true"><use href="#i-train"/></svg>U1/U2/U4 Karlsplatz</span>
+          <span><svg class="icon" aria-hidden="true"><use href="#i-access"/></svg>barrierefrei <span class="ph">prüfen</span></span>
+          <span><svg class="icon" aria-hidden="true"><use href="#i-card"/></svg>Kartenzahlung <span class="ph">prüfen</span></span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Öffnungszeiten</h3>
+        <ul class="hours" id="hours">
+          <li data-d="1"><span>Montag</span><span>8:30 – 23:00</span></li>
+          <li data-d="2"><span>Dienstag</span><span>8:30 – 23:00</span></li>
+          <li data-d="3"><span>Mittwoch</span><span>8:30 – 23:00</span></li>
+          <li data-d="4"><span>Donnerstag</span><span>8:30 – 23:00</span></li>
+          <li data-d="5"><span>Freitag</span><span>8:30 – 23:00</span></li>
+          <li data-d="6"><span>Samstag</span><span>8:30 – 23:00</span></li>
+          <li data-d="0"><span>Sonn- & Feiertag</span><span>10:00 – 21:00</span></li>
+        </ul>
+        <a class="btn dark" style="margin-top:20px;width:100%" href="tel:+43676843353203"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Tisch reservieren</a>
+      </div>
+    </div>
+    <div class="mapbox" id="mapbox">
+      <div>
+        <h3 class="serif" style="font-size:1.4rem;display:inline-flex;align-items:center;gap:8px"><svg class="icon" aria-hidden="true" style="color:var(--gold)"><use href="#i-pin"/></svg>Karte anzeigen</h3>
+        <p>Beim Laden der Karte werden Daten an Google übertragen. Mehr dazu in der Datenschutzerklärung.</p>
+        <button class="btn gold" id="loadmap">Karte laden</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="legal" id="rechtliches" aria-labelledby="recht-title">
+  <div class="wrap">
+    <span class="eyebrow"><svg aria-hidden="true"><use href="#i-star"/></svg>Rechtliches</span>
+    <h2 class="title" id="recht-title">Impressum & Datenschutz</h2>
+
+    <details id="impressum">
+      <summary>Impressum<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+      <div class="body">
+        <p>Informationspflicht laut § 5 E-Commerce-Gesetz, § 14 Unternehmensgesetzbuch, § 63 Gewerbeordnung und Offenlegungspflicht laut § 25 Mediengesetz.</p>
+        <h4>Medieninhaber und Betreiber</h4>
+        <p>STELLA am Naschmarkt<br>Inhaber: Robert Lewiew<br>Naschmarkt Stand Nr. 332 (gegenüber Linke Wienzeile 16)<br>1060 Wien, Österreich</p>
+        <h4>Kontakt</h4>
+        <p>Telefon: <a href="tel:+43676843353203">+43 676 843 353 203</a><br>E-Mail: <a href="mailto:office@stella-lokal.at">office@stella-lokal.at</a></p>
+        <h4>Unternehmensdaten</h4>
+        <p>UID-Nummer: ATU50667201<br>Unternehmensgegenstand: Gastgewerbe <span class="ph">genaue Gewerbeberechtigung prüfen</span><br>Gewerbebehörde: <span class="ph">Magistratisches Bezirksamt für den 6. Bezirk prüfen</span><br>Mitglied der Wirtschaftskammer Wien, Fachgruppe Gastronomie <span class="ph">prüfen</span><br>Anwendbare Rechtsvorschriften: Gewerbeordnung, abrufbar unter www.ris.bka.gv.at<br>Gerichtsstand: Wien</p>
+        <h4>Verbraucherstreitbeilegung</h4>
+        <p>Wir sind nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+        <h4>Haftung</h4>
+        <p>Trotz sorgfältiger Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich. Bilder: <span class="ph">Bildrechte angeben</span></p>
+      </div>
+    </details>
+
+    <details id="datenschutz">
+      <summary>Datenschutzerklärung<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+      <div class="body">
+        <p class="ph" style="display:inline-block;margin-bottom:12px">Vorlage: vor dem Livegang von STELLA prüfen und an Hoster und genutzte Dienste anpassen.</p>
+        <h4>1. Verantwortlicher</h4>
+        <p>STELLA am Naschmarkt, Robert Lewiew, Naschmarkt Stand 332, 1060 Wien, office@stella-lokal.at, +43 676 843 353 203.</p>
+        <h4>2. Allgemeines</h4>
+        <p>Der Schutz deiner persönlichen Daten ist uns wichtig. Wir verarbeiten Daten ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, DSG, TKG 2021).</p>
+        <h4>3. Hosting und Server-Logfiles</h4>
+        <p>Diese Website wird bei <span class="ph">Hoster eintragen</span> betrieben. Beim Aufruf werden technisch notwendige Daten (IP-Adresse, Datum, Uhrzeit, aufgerufene Seite, Browser) kurzzeitig in Logfiles gespeichert. Rechtsgrundlage ist unser berechtigtes Interesse an einem sicheren Betrieb (Art. 6 Abs. 1 lit. f DSGVO).</p>
+        <h4>4. Kontakt per Telefon oder E-Mail</h4>
+        <p>Wenn du uns kontaktierst oder einen Tisch reservierst, verarbeiten wir deine Angaben (Name, Telefonnummer, Zeitpunkt, Personenanzahl) nur zur Bearbeitung der Anfrage beziehungsweise Reservierung (Art. 6 Abs. 1 lit. b DSGVO) und löschen sie, sobald sie nicht mehr gebraucht werden.</p>
+        <h4>5. Google Fonts</h4>
+        <p>Diese Seite nutzt Schriftarten von Google Fonts (Google Ireland Limited). Dabei wird deine IP-Adresse an Google übertragen. <span class="ph">Empfehlung: Schriften lokal einbinden, dann kann dieser Absatz entfallen.</span></p>
+        <h4>6. Google Maps</h4>
+        <p>Die Karte wird erst geladen, wenn du auf „Karte laden“ klickst. Erst dann werden Daten (u. a. IP-Adresse) an Google übertragen. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die du jederzeit durch Neuladen der Seite widerrufen kannst.</p>
+        <h4>7. Cookies</h4>
+        <p>Diese Website selbst setzt keine Cookies. Beim Laden von Google Maps können Cookies durch Google gesetzt werden.</p>
+        <h4>8. Deine Rechte</h4>
+        <p>Dir stehen die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch zu. Wenn du glaubst, dass die Verarbeitung deiner Daten gegen das Datenschutzrecht verstößt, kannst du dich bei der Österreichischen Datenschutzbehörde (www.dsb.gv.at) beschweren.</p>
+        <p>Stand: <span class="ph">Datum</span></p>
+      </div>
+    </details>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>STELLA am Naschmarkt · Stand 332 · 1060 Wien</span>
+    <span><a href="#impressum" data-open>Impressum</a> · <a href="#datenschutz" data-open>Datenschutz</a> · © <span id="y">2026</span></span>
+  </div>
+</footer>
+
+<nav class="actionbar" aria-label="Schnellaktionen">
+  <a href="tel:+43676843353203"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Anrufen</a>
+  <a href="https://www.google.com/maps/dir/?api=1&destination=48.198629,16.363371" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Route</a>
+  <a href="#karte"><svg class="icon" aria-hidden="true"><use href="#i-list"/></svg>Speisekarte</a>
+</nav>
+
+<script>
+/* ================= MEDIA =================
+   Eigene Fotos und Videos hier eintragen. Dateien in die Ordner bilder/ und videos/ legen.
+*/
+const MEDIA={
+  showPlaceholders:true,          // vor dem Livegang auf false setzen
+  heroVideo:'',                   // z.B. 'videos/hero.mp4' (kurz, ohne Ton, unter 10 MB)
+  heroPoster:'',                  // z.B. 'bilder/hero.jpg'
+  about:'',                       // z.B. 'bilder/lokal.jpg'
+  gallery:['','','','','','']     // z.B. 'bilder/fruehstueck.jpg', 'videos/bar.mp4' oder YouTube-Embed-Link
+};
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+(function(){
+  const el=(t,a={})=>Object.assign(document.createElement(t),a);
+  if(MEDIA.heroVideo&&!reduced){
+    const v=el('video',{src:MEDIA.heroVideo,autoplay:true,muted:true,loop:true,playsInline:true,className:'hero-video'});
+    v.muted=true;v.setAttribute('aria-hidden','true');if(MEDIA.heroPoster)v.poster=MEDIA.heroPoster;
+    document.querySelector('.hero').prepend(v);
+  }
+  const t=document.getElementById('about-tile');
+  if(MEDIA.about){t.classList.add('has-img');t.replaceChildren(el('img',{src:MEDIA.about,alt:'STELLA am Naschmarkt',loading:'lazy'}));}
+  else if(!MEDIA.showPlaceholders)t.querySelector('.ph-txt').remove();
+  const labels=['Frühstück','Lieblingsgericht','Gastgarten','Bar & Cocktails','Team','Naschmarkt'];
+  const g=document.getElementById('gallery');let n=0;
+  MEDIA.gallery.forEach((src,i)=>{
+    const d=el('div',{className:'g-item reveal'});
+    if(!src){if(!MEDIA.showPlaceholders)return;d.textContent='Foto: '+labels[i];}
+    else if(/\.(mp4|webm)$/i.test(src))d.append(el('video',{src,controls:true,muted:true,loop:true,playsInline:true,preload:'metadata'}));
+    else if(/^https:\/\//.test(src))d.append(el('iframe',{src,title:'Video',loading:'lazy',allowFullscreen:true}));
+    else d.append(el('img',{src,alt:'STELLA '+labels[i],loading:'lazy'}));
+    g.append(d);n++;
+  });
+  if(!n)document.getElementById('galerie').remove();
+})();
+
+/* Sterne im Hero */
+(function(){const s=document.getElementById('stars');for(let i=0;i<46;i++){const x=document.createElement('i');x.style.left=Math.random()*100+'%';x.style.top=Math.random()*100+'%';x.style.animationDelay=(Math.random()*3.5)+'s';s.append(x);}})();
+
+/* Jetzt geöffnet? (Wiener Zeit, Feiertage nicht berücksichtigt) */
+(function(){
+  const HOURS={0:[600,1260],1:[510,1380],2:[510,1380],3:[510,1380],4:[510,1380],5:[510,1380],6:[510,1380]};
+  const p=Object.fromEntries(new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Vienna',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date()).map(x=>[x.type,x.value]));
+  const day=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);
+  const now=(+p.hour%24)*60+(+p.minute);
+  const fmt=m=>Math.floor(m/60)+':'+String(m%60).padStart(2,'0');
+  const [o,c]=HOURS[day];
+  const st=document.getElementById('status'),tx=document.getElementById('status-text');
+  if(now>=o&&now<c){st.classList.add('open');tx.textContent='Jetzt geöffnet · bis '+fmt(c)+' Uhr';}
+  else if(now<o){tx.textContent='Geschlossen · öffnet heute um '+fmt(o)+' Uhr';}
+  else{const n=HOURS[(day+1)%7];tx.textContent='Geschlossen · öffnet morgen um '+fmt(n[0])+' Uhr';}
+  const li=document.querySelector('#hours li[data-d="'+day+'"]');if(li)li.classList.add('today');
+})();
+
+/* Menü */
+const burger=document.querySelector('.burger'),menu=document.getElementById('menu');
+const setMenu=o=>{menu.classList.toggle('open',o);burger.setAttribute('aria-expanded',o);burger.setAttribute('aria-label',o?'Menü schließen':'Menü öffnen');};
+burger.addEventListener('click',()=>setMenu(!menu.classList.contains('open')));
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menu.classList.contains('open')){setMenu(false);burger.focus();}});
+
+/* Tabs mit Pfeiltasten */
+const tabs=[...document.querySelectorAll('.tab')];
+const select=tab=>{tabs.forEach(t=>{const on=t===tab;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;document.getElementById(t.getAttribute('aria-controls')).hidden=!on;});};
+tabs.forEach((tab,i)=>{
+  tab.addEventListener('click',()=>select(tab));
+  tab.addEventListener('keydown',e=>{
+    let j=null;
+    if(e.key==='ArrowRight')j=(i+1)%tabs.length;else if(e.key==='ArrowLeft')j=(i-1+tabs.length)%tabs.length;else if(e.key==='Home')j=0;else if(e.key==='End')j=tabs.length-1;
+    if(j!==null){e.preventDefault();select(tabs[j]);tabs[j].focus();}
+  });
+});
+
+/* Karte erst nach Klick */
+document.getElementById('loadmap').addEventListener('click',()=>{
+  document.getElementById('mapbox').innerHTML='<iframe title="Karte STELLA am Naschmarkt" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=48.198629,16.363371&z=17&output=embed"></iframe>';
+});
+document.querySelectorAll('[data-open]').forEach(a=>a.addEventListener('click',()=>{document.querySelector(a.getAttribute('href')).open=true;}));
+document.getElementById('y').textContent=new Date().getFullYear();
+
+/* Aktiver Menüpunkt beim Scrollen */
+const links=[...menu.querySelectorAll('a[href^="#"]:not(.call)')];
+const secObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(l=>l.getAttribute('href')==='#'+e.target.id?l.setAttribute('aria-current','true'):l.removeAttribute('aria-current'));}),{rootMargin:'-45% 0px -50% 0px'});
+links.forEach(l=>{const s=document.querySelector(l.getAttribute('href'));if(s)secObs.observe(s);});
+
+/* Einblenden beim Scrollen */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(r=>io.observe(r));
+</script>
+</body>
+</html>

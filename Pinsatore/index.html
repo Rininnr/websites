@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pinsatore Wien | Pinsa Romana in der Schleifmühlgasse</title>
+<meta name="description" content="Pinsatore in 1040 Wien: Pinsa Romana, Pinsa Bianca, vegane Pinsa, Salate und Dolci. Vor Ort, zum Mitnehmen oder mit Lieferung in den 4. bis 7. Bezirk.">
+<meta property="og:title" content="Pinsatore Wien | Pinsa Romana">
+<meta property="og:description" content="Der Teig macht die Musik. Schleifmühlgasse 21, 1040 Wien.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf6ec;--card:#fff;--sand:#f3e9d4;--text:#2b2420;--muted:#6d6258;--line:#e7dcc6;--red:#c8342b;--green:#2f6b3a;--green-deep:#1f4a28;--cream:#fbf6ec;--r:2rem}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"DM Sans",system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+h1,h2,h3,.display{font-family:"Fraunces",Georgia,serif;letter-spacing:-.02em;margin:0}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.demo{background:var(--green-deep);color:var(--cream);text-align:center;font-size:.8rem;padding:6px 12px}
+header{position:sticky;top:0;z-index:30;background:rgba(251,246,236,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+.logo{font-size:1.7rem;text-decoration:none;color:var(--red)}
+.logo small{display:block;font-family:"DM Sans";font-size:.62rem;letter-spacing:.14em;color:var(--muted);font-weight:500;margin-top:2px}
+nav{display:flex;gap:28px;font-size:.92rem;color:var(--muted)}
+nav a{text-decoration:none}
+nav a:hover{color:var(--red)}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;text-decoration:none;font-weight:500;padding:10px 20px;border-radius:999px;font-size:.92rem}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center;padding-top:72px;padding-bottom:88px}
+.eyebrow{font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin:0 0 16px;font-weight:500}
+h1{font-size:clamp(2.5rem,6vw,4.3rem);line-height:1.03}
+h1 em{font-style:italic;color:var(--red)}
+.lead{font-size:1.15rem;color:var(--muted);max-width:30rem;margin:22px 0 0}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:999px;font-weight:500;text-decoration:none;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:var(--red);color:#fff;box-shadow:0 6px 18px rgba(200,52,43,.28)}
+.btn.ghost{border:1px solid var(--line);background:var(--card)}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.badge{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-size:.88rem}
+.hero-art{position:relative}
+.pinsa{aspect-ratio:1/1;border-radius:2.5rem;background:radial-gradient(circle at 30% 25%,#f6d9a0,#e0a850 70%);box-shadow:0 24px 50px rgba(120,70,10,.25);display:grid;place-items:center;overflow:hidden}
+.pinsa svg{width:78%;height:auto}
+.float{position:absolute;left:-18px;bottom:-22px;max-width:14rem;background:var(--card);border-radius:1.5rem;padding:16px 18px;box-shadow:0 14px 34px rgba(60,40,10,.16);font-size:.9rem;color:var(--muted)}
+.float b{display:block;color:var(--green);font-family:"Fraunces",serif;font-size:1.05rem;margin-bottom:2px}
+section{padding:88px 0}
+.alt{background:var(--sand)}
+h2{font-size:clamp(1.9rem,4vw,2.7rem);line-height:1.1}
+.sub{color:var(--muted);max-width:34rem;margin:12px 0 0}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.photo{aspect-ratio:4/3;border-radius:2.5rem;background:linear-gradient(135deg,#d8ecd0,#7fb98a);display:grid;place-items:center;font-size:5rem;box-shadow:0 18px 40px rgba(47,107,58,.2)}
+.split p{color:var(--muted);font-size:1.08rem;margin:18px 0 0}
+.link{display:inline-block;margin-top:24px;font-weight:500;color:var(--red);border-bottom:2px solid var(--red);padding-bottom:3px;text-decoration:none}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin-top:40px}
+.card{background:var(--card);border-radius:var(--r);overflow:hidden;box-shadow:0 2px 10px rgba(60,40,10,.07);transition:box-shadow .3s,transform .3s}
+.card:hover{box-shadow:0 18px 40px rgba(60,40,10,.15);transform:translateY(-4px)}
+.card .img{aspect-ratio:16/9;display:grid;place-items:center;font-size:3.6rem}
+.c1 .img{background:linear-gradient(135deg,#ffd9a8,#e9894d)}
+.c2 .img{background:linear-gradient(135deg,#fff3d6,#f1cf84)}
+.c3 .img{background:linear-gradient(135deg,#d8ecd0,#7fb98a)}
+.c4 .img{background:linear-gradient(135deg,#f9d4d0,#e08a84)}
+.card .body{padding:24px}
+.card h3{font-size:1.5rem}
+.card p{margin:8px 0 0;color:var(--muted)}
+.note{margin-top:34px;color:var(--muted)}
+.note a{color:var(--red);font-weight:500}
+.loc{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.addr{display:flex;gap:12px;margin-top:22px;font-size:1.1rem}
+.times{margin-top:22px;background:var(--sand);border-radius:var(--r);padding:26px}
+.times .t{font-weight:700;margin-bottom:10px}
+.times .r{display:flex;justify-content:space-between;gap:16px;padding:7px 0;color:var(--muted);border-bottom:1px solid var(--line)}
+.times .r:last-child{border:0}
+.times .closed{color:var(--red);font-weight:500}
+.map{border-radius:var(--r);overflow:hidden;min-height:340px;box-shadow:0 14px 34px rgba(60,40,10,.15)}
+.map iframe{width:100%;height:100%;min-height:340px;border:0}
+.contact{text-align:center;max-width:720px;margin:0 auto}
+.contact .btns{justify-content:center}
+footer{background:var(--green-deep);color:var(--cream)}
+footer .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;padding-top:52px;padding-bottom:52px;font-size:.92rem}
+footer .display{font-size:1.6rem}
+footer p{margin:10px 0 0;opacity:.85}
+footer b{display:block;margin-bottom:10px}
+@media(max-width:820px){
+  nav{display:none}
+  .hero .wrap,.split,.loc{grid-template-columns:1fr;gap:36px}
+  .hero .wrap{padding-top:44px;padding-bottom:64px}
+  .cards{grid-template-columns:1fr}
+  footer .wrap{grid-template-columns:1fr}
+  section{padding:60px 0}
+  .float{left:12px}
+}
+</style>
+</head>
+<body>
+<div class="demo">Entwurf / Beispielseite, noch nicht veröffentlicht</div>
+<header><div class="wrap">
+  <a class="logo display" href="#top">Pinsatore<small>PINSA ROMANA · WIEN</small></a>
+  <nav><a href="#karte">Karte</a><a href="#lieferung">Lieferung</a><a href="#standort">Standort</a><a href="#kontakt">Kontakt</a></nav>
+  <a class="pill" href="tel:+43189036480">📞 <span>01 890 36 48</span></a>
+</div></header>
+
+<main id="top">
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <p class="eyebrow">Schleifmühlgasse 21 · 1040 Wien</p>
+    <h1>Der Teig macht<br><em>die Musik.</em></h1>
+    <p class="lead">Pinsa Romana, die leichte römische Verwandte der Pizza. Frisch belegt, ob vor Ort, zum Mitnehmen oder direkt zu dir nach Hause.</p>
+    <div class="btns">
+      <a class="btn primary" href="tel:+43189036480">📞 Jetzt bestellen</a>
+      <a class="btn ghost" href="#karte">Zur Karte</a>
+    </div>
+    <div class="badges">
+      <span class="badge">🛵 Lieferung 4. bis 7. Bezirk</span><span class="badge">🌱 Auch vegan</span><span class="badge">🕐 Mo bis Sa 12 bis 22 Uhr</span>
+    </div>
+  </div>
+  <div class="hero-art">
+    <div class="pinsa">
+      <svg viewBox="0 0 200 130" aria-hidden="true"><ellipse cx="100" cy="68" rx="92" ry="52" fill="#f3cf86"/><ellipse cx="100" cy="66" rx="80" ry="43" fill="#c8342b" opacity=".9"/><g fill="#fff6e0"><circle cx="70" cy="60" r="9"/><circle cx="108" cy="52" r="10"/><circle cx="132" cy="74" r="9"/><circle cx="88" cy="82" r="8"/></g><g fill="#2f6b3a"><path d="M60 50q6-9 12 0q-6 5-12 0z"/><path d="M120 62q6-9 12 0q-6 5-12 0z"/><path d="M96 72q6-9 12 0q-6 5-12 0z"/><path d="M140 52q6-9 12 0q-6 5-12 0z"/></g></svg>
+    </div>
+    <div class="float"><b>Leicht &amp; knusprig</b>Der Teig ist das Besondere.</div>
+  </div>
+</div></section>
+
+<section class="alt"><div class="wrap split">
+  <div class="photo" aria-hidden="true">🌿</div>
+  <div>
+    <h2>Pinsa statt Pizza</h2>
+    <p>Bei uns steht der Teig im Mittelpunkt. Er ist luftig, knusprig und bekömmlich, belegt mit frischen Zutaten. Dazu gibt es Salate und süße Dolci zum Abschluss.</p>
+    <p>Du hast Lust auf etwas Pflanzliches? Unsere Pinsa Vegana ist genau dafür gemacht.</p>
+    <a class="link" href="#karte">Unsere Karte ansehen</a>
+  </div>
+</div></section>
+
+<section id="karte"><div class="wrap">
+  <h2>Unsere Karte</h2>
+  <p class="sub">Frisch zubereitet, mit dem Teig als Star.</p>
+  <div class="cards">
+    <article class="card c1"><div class="img" aria-hidden="true">🍕</div><div class="body"><h3>Pinse</h3><p>Die klassischen Pinse mit verschiedenen Belägen.</p></div></article>
+    <article class="card c2"><div class="img" aria-hidden="true">🧀</div><div class="body"><h3>Pinsa Bianca</h3><p>Die weiße Variante ohne Tomatensauce.</p></div></article>
+    <article class="card c3"><div class="img" aria-hidden="true">🥬</div><div class="body"><h3>Pinsa Vegana &amp; Insalate</h3><p>Pflanzlich belegt, dazu frische Salate.</p></div></article>
+    <article class="card c4"><div class="img" aria-hidden="true">🍰</div><div class="body"><h3>Dolci</h3><p>Süße Desserts für den perfekten Abschluss.</p></div></article>
+  </div>
+  <p class="note">Aktuelle Karte und Preise: <a href="tel:+43189036480">einfach anrufen</a> oder vorbeikommen.</p>
+</div></section>
+
+<section id="lieferung" class="alt"><div class="wrap split">
+  <div>
+    <h2>Wir liefern zu dir</h2>
+    <p>Pinsa direkt aufs Sofa: Wir liefern in den 4., 5., 6. und 7. Bezirk. Ruf einfach an und bestelle.</p>
+    <div class="btns"><a class="btn primary" href="tel:+43189036480">📞 01 890 36 48</a></div>
+  </div>
+  <div class="photo" aria-hidden="true" style="background:linear-gradient(135deg,#ffd9a8,#c8342b 140%)">🛵</div>
+</div></section>
+
+<section id="standort"><div class="wrap loc">
+  <div>
+    <h2>Standort &amp; Öffnungszeiten</h2>
+    <p class="addr">📍 <span>Schleifmühlgasse 21, 1040 Wien</span></p>
+    <div class="times">
+      <div class="t">🕐 Öffnungszeiten</div>
+      <div class="r"><span>Montag bis Samstag</span><span>12:00 bis 22:00</span></div>
+      <div class="r"><span>Sonntag</span><span class="closed">geschlossen</span></div>
+    </div>
+  </div>
+  <div class="map">
+    <iframe title="Karte: Pinsatore, Schleifmühlgasse 21, 1040 Wien" loading="lazy"
+      src="https://www.openstreetmap.org/export/embed.html?bbox=16.3560%2C48.1950%2C16.3720%2C48.2030&layer=mapnik"></iframe>
+  </div>
+</div></section>
+
+<section id="kontakt" class="alt"><div class="wrap contact">
+  <h2>Hunger auf Pinsa?</h2>
+  <p class="sub" style="margin:14px auto 0">Bestell telefonisch, schreib uns oder komm einfach vorbei.</p>
+  <div class="btns" style="margin-top:28px">
+    <a class="btn primary" href="tel:+43189036480">📞 Anrufen</a>
+    <a class="btn ghost" href="mailto:amore@pinsatore.at">✉️ amore@pinsatore.at</a>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div><span class="display">Pinsatore</span><p>Schleifmühlgasse 21<br>1040 Wien<br><a href="tel:+43189036480">01 890 36 48</a></p></div>
+  <div><b>Öffnungszeiten</b><p>Mo bis Sa<br>12:00 bis 22:00<br>Sonntag geschlossen</p></div>
+  <div><b>Rechtliches</b><p>[Impressum, Platzhalter]<br>[Datenschutz, Platzhalter]</p></div>
+</div></footer>
+</body>
+</html>

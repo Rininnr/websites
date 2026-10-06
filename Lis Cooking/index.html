@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Li's Cooking Asia Dream | Asiatisch essen am Naschmarkt Wien</title>
+<meta name="description" content="Li's Cooking am Naschmarkt, 1060 Wien: Dim Sum, Sushi, Pho, Thai und Vietnam. Mo bis Sa 11:30 bis 23:00. Jetzt Tisch reservieren: 01 585 40 57.">
+<meta property="og:title" content="Li's Cooking Asia Dream | Naschmarkt Wien">
+<meta property="og:description" content="Dim Sum, Sushi, Pho und Woks am Naschmarkt. Naschmarktstand 126 bis 129, 1060 Wien.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Li's Cooking Asia Dream","servesCuisine":["Chinesisch","Japanisch","Thai","Vietnamesisch"],"telephone":"+4315854057","address":{"@type":"PostalAddress","streetAddress":"Naschmarktstand 126-129","postalCode":"1060","addressLocality":"Wien","addressCountry":"AT"},"geo":{"@type":"GeoCoordinates","latitude":48.198693,"longitude":16.36363},"openingHours":["Mo-Sa 11:30-23:00"],"acceptsReservations":true}
+</script>
+<style>
+:root{--ink:#140f0f;--ink2:#1f1717;--paper:#faf6f1;--card:#fff;--text:#1d1616;--muted:#6f6363;--line:#ece3da;--red:#c8102e;--red2:#e0263f;--gold:#d9a95b;--r:22px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-weight:300;font-family:Jost,system-ui,sans-serif;background:var(--paper);color:var(--text);line-height:1.6}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;margin:0;letter-spacing:0}
+a{color:inherit}
+img{max-width:100%}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.demo{background:#000;color:#bbb;text-align:center;font-size:.78rem;padding:6px 12px}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 1.5rem;border-radius:999px;font-weight:500;letter-spacing:.03em;text-decoration:none;border:0;cursor:pointer;font-size:1rem;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red2)}
+.btn-ghost{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.25)}
+
+/* Header */
+header{position:sticky;top:0;z-index:40;background:rgba(20,15,15,.85);backdrop-filter:blur(12px);color:#fff;border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-family:"Cormorant Garamond",serif;font-size:1.8rem;font-weight:600;letter-spacing:.02em}
+.logo .bowl{width:34px;height:34px;border-radius:0 0 34px 34px;background:var(--red);position:relative;top:4px}
+.logo .bowl:before{content:"";position:absolute;left:-4px;right:-4px;top:-5px;height:5px;border-radius:4px;background:#fff}
+.links{display:flex;gap:1.8rem;align-items:center;font-size:.95rem}
+.links a{text-decoration:none;opacity:.85}
+.links a:hover{opacity:1;color:var(--gold)}
+.links .btn{padding:.6rem 1.1rem;font-size:.9rem;opacity:1}
+.burger{display:none;background:none;border:0;color:#fff;font-size:1.6rem;cursor:pointer}
+
+/* Hero */
+.hero{position:relative;background:radial-gradient(1200px 600px at 75% 40%,#3a0d14 0%,var(--ink) 60%);color:#fff;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;min-height:calc(92vh - 68px);padding-top:60px;padding-bottom:60px}
+.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:.28em;font-size:.75rem;font-weight:500}
+.hero h1{font-size:clamp(3rem,7vw,5.6rem);line-height:1;font-weight:500;margin:.6rem 0 1.2rem}
+.hero h1 em{color:var(--red2);font-style:italic}
+.hero p{font-size:1.2rem;font-weight:300;color:#d9cfcf;max-width:520px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:2rem}
+.facts{display:flex;gap:28px;margin-top:2.5rem;flex-wrap:wrap;color:#cfc3c3;font-size:.92rem}
+.facts b{display:block;color:#fff;font-size:1.05rem}
+.plate{position:relative;aspect-ratio:1;max-width:480px;margin-left:auto;width:100%}
+.plate .ring{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 50% 45%,#fff 0 38%,#f1ece6 39% 52%,#2a1b1b 53% 54%,transparent 55%);box-shadow:0 40px 80px rgba(0,0,0,.6)}
+.plate .food{position:absolute;inset:22%;border-radius:50%;background:
+ radial-gradient(circle at 35% 35%,#ff8a5c 0 9%,transparent 10%),
+ radial-gradient(circle at 62% 40%,#ff7043 0 8%,transparent 9%),
+ radial-gradient(circle at 48% 62%,#e8402f 0 7%,transparent 8%),
+ radial-gradient(circle at 30% 60%,#4caf50 0 6%,transparent 7%),
+ radial-gradient(circle at 66% 66%,#66bb6a 0 5%,transparent 6%),
+ radial-gradient(circle at 55% 25%,#81c784 0 5%,transparent 6%),
+ radial-gradient(circle,#f6c66b 0,#e9a83c 70%);
+ box-shadow:inset 0 0 40px rgba(120,60,0,.5)}
+.steam{position:absolute;top:-6%;left:50%;width:60px;height:120px;transform:translateX(-50%);opacity:.35;background:linear-gradient(transparent,#fff);filter:blur(18px);border-radius:50%;animation:steam 4s ease-in-out infinite}
+@keyframes steam{0%,100%{transform:translate(-50%,0) scaleY(1);opacity:.25}50%{transform:translate(-40%,-14px) scaleY(1.15);opacity:.45}}
+.badge{position:absolute;background:#fff;color:var(--text);border-radius:16px;padding:.7rem 1rem;box-shadow:0 20px 40px rgba(0,0,0,.35);font-size:.85rem;line-height:1.3}
+.badge b{display:block;font-size:1rem}
+.b1{left:-4%;bottom:12%}.b2{right:-2%;top:10%}
+
+/* Sections */
+section{padding:90px 0}
+.head{text-align:center;max-width:640px;margin:0 auto 46px}
+.head h2{font-size:clamp(2.4rem,5vw,3.4rem);margin:.4rem 0 .8rem}
+.head p{color:var(--muted)}
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.cat{background:var(--card);border-radius:var(--r);padding:26px;border:1px solid var(--line);text-decoration:none;transition:transform .2s,box-shadow .2s}
+.cat:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(60,20,20,.1)}
+.cat .ic{font-size:2rem}
+.cat h3{font-size:1.6rem;margin:.6rem 0 .2rem}
+.cat p{margin:0;color:var(--muted);font-size:.92rem}
+
+/* Menu */
+.menu{background:var(--ink);color:#fff}
+.menu .head p{color:#bdb0b0}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:18px;scrollbar-width:none;position:sticky;top:68px;z-index:5;background:var(--ink);padding-top:10px}
+.tab{flex:none;background:rgba(255,255,255,.07);color:#ddd;border:1px solid rgba(255,255,255,.12);padding:.55rem 1rem;border-radius:999px;cursor:pointer;font:inherit;font-size:.9rem}
+.tab.on{background:var(--red);border-color:var(--red);color:#fff}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}
+.tools input{flex:1;min-width:220px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);color:#fff;border-radius:999px;padding:.7rem 1.1rem;font:inherit}
+.chip{background:none;border:1px solid rgba(255,255,255,.2);color:#ddd;border-radius:999px;padding:.6rem 1rem;cursor:pointer;font:inherit;font-size:.88rem}
+.chip.on{background:#fff;color:var(--ink)}
+.acc{border:1px solid rgba(255,255,255,.1);border-radius:var(--r);background:var(--ink2);margin-bottom:12px;overflow:hidden}
+.acc>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;padding:20px 24px;font-family:"Cormorant Garamond",serif;font-size:1.7rem}
+.acc>summary::-webkit-details-marker{display:none}
+.acc>summary .cnt{font-family:Jost,sans-serif;font-size:.8rem;color:#bdb0b0;background:rgba(255,255,255,.08);border-radius:999px;padding:.15rem .7rem}
+.acc>summary:after{content:"+";margin-left:auto;font-family:Jost;font-size:1.6rem;color:var(--gold);transition:transform .2s}
+.acc[open]>summary:after{transform:rotate(45deg)}
+.acc[open]>summary{background:rgba(200,16,46,.15)}
+.acc .dishes{padding:20px}
+.dishes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.dish{background:var(--ink2);border:1px solid rgba(255,255,255,.07);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.dish .pic{aspect-ratio:16/10;display:grid;place-items:center;font-size:3.4rem;background:radial-gradient(circle at 50% 60%,#3a2525,#1a1212)}
+.dish .body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:.4rem;flex:1}
+.dish .top{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.dish h3{font-size:1.4rem;line-height:1.15}
+.dish .nr{color:var(--gold);font-family:Jost;font-size:.78rem;font-weight:600;margin-right:.35rem}
+.price{font-weight:600;white-space:nowrap}
+.dish p{margin:0;color:#bdb0b0;font-size:.9rem}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:8px}
+.tag{font-size:.72rem;padding:.2rem .55rem;border-radius:999px;background:rgba(255,255,255,.08);color:#ddd}
+.tag.hot{background:rgba(200,16,46,.25);color:#ff9aa9}
+.tag.veg{background:rgba(76,175,80,.2);color:#a5d6a7}
+.allerg{margin-top:28px;font-size:.82rem;color:#9d9090}
+
+/* Kochkurse + Info */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:36px}
+.panel h2{font-size:2.4rem;margin:.3rem 0 .8rem}
+.panel.red{background:var(--red);color:#fff;border:0}
+.panel.red .eyebrow{color:#ffd9a0}
+.panel.red p{color:#ffe3e7}
+.hours{width:100%;border-collapse:collapse;margin:1rem 0}
+.hours td{padding:.55rem 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;font-weight:600}
+.map{margin-top:28px;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);height:320px;background:#e9e4de}
+.map iframe{border:0;width:100%;height:100%}
+
+/* Footer + mobile bar */
+footer{background:var(--ink);color:#bdb0b0;padding:50px 0 100px;font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+footer a{color:#fff}
+.mobilebar{display:none}
+
+@media (max-width:900px){
+ .hero .wrap{grid-template-columns:1fr;min-height:auto;text-align:left}
+ .plate{max-width:320px;margin:20px auto 0}
+ .cats{grid-template-columns:repeat(2,1fr)}
+ .dishes{grid-template-columns:repeat(2,1fr)}
+ .split{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+ .links{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;background:var(--ink);padding:20px;gap:1rem}
+ .links.open{display:flex}
+ .burger{display:block}
+ section{padding:64px 0}
+ .dishes{grid-template-columns:1fr}.dish .pic{aspect-ratio:16/6;font-size:2.4rem}.acc .dishes{padding:12px}.acc>summary{padding:16px 18px;font-size:1.5rem}
+ .cats{gap:12px}.cat{padding:18px}
+ .b1,.b2{display:none}
+ .mobilebar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:50;gap:10px}
+ .mobilebar a{flex:1;white-space:nowrap;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+ .mobilebar .btn-ghost{background:#fff;color:var(--ink)}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="demo">Entwurf für Li's Cooking. Komplette Speisekarte von liscooking.at übernommen, Fotos folgen.</div>
+
+<header>
+ <div class="wrap nav">
+  <a class="logo" href="#top"><span class="bowl" aria-hidden="true"></span>Li's cooking</a>
+  <button class="burger" aria-label="Menü öffnen" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
+  <nav class="links" aria-label="Hauptmenü">
+   <a href="#karte">Speisekarte</a>
+   <a href="#kochkurse">Kochkurse</a>
+   <a href="#besuch">Öffnungszeiten</a>
+   <a href="#besuch">Anfahrt</a>
+   <a class="btn btn-red" href="tel:+4315854057">Tisch reservieren</a>
+  </nav>
+ </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding:0">
+ <div class="wrap">
+  <div>
+   <span class="eyebrow">Naschmarkt · 1060 Wien</span>
+   <h1>Asien, frisch gekocht. <em>Mitten am Naschmarkt.</em></h1>
+   <p>Dim Sum, Sushi, Pho und Woks aus China, Japan, Thailand und Vietnam. Frisch gekocht und serviert direkt am Naschmarktstand 126 bis 129.</p>
+   <div class="cta">
+    <a class="btn btn-red" href="tel:+4315854057">📞 Tisch reservieren</a>
+    <a class="btn btn-ghost" href="#karte">Speisekarte ansehen</a>
+   </div>
+   <div class="facts">
+    <div><b>Mo bis Sa</b>11:30 bis 23:00</div>
+    <div><b>Über 150 Gerichte</b>in 10 Kategorien</div>
+    <div><b>U1 U2 U4</b>Karlsplatz</div>
+   </div>
+  </div>
+  <div class="plate" aria-hidden="true">
+   <div class="steam"></div>
+   <div class="ring"></div>
+   <div class="food"></div>
+   <div class="badge b1"><b>🌶 Coconut Sea</b>Garnelen, Kokos, Limette</div>
+   <div class="badge b2"><b>Mo bis Sa</b>bis 23:00 offen</div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <div class="head">
+   <span class="eyebrow">Was darf's sein?</span>
+   <h2>Eine Küche, vier Länder</h2>
+   <p>Von knusprigen Vorspeisen bis zum großen Sushi Set für die ganze Runde.</p>
+  </div>
+  <div class="cats">
+   <a class="cat" href="#karte" data-go="Dim Sum"><div class="ic">🥟</div><h3>Dim Sum</h3><p>Gedämpft und gebraten</p></a>
+   <a class="cat" href="#karte" data-go="Sushi/Maki"><div class="ic">🍣</div><h3>Sushi & Maki</h3><p>Und Li's Special Sets</p></a>
+   <a class="cat" href="#karte" data-go="Pho"><div class="ic">🍜</div><h3>Pho</h3><p>Vietnamesische Suppen</p></a>
+   <a class="cat" href="#karte" data-go="Asia, Thai & Vietnam"><div class="ic">🔥</div><h3>Hot Pan & Wok</h3><p>Thai, Vietnam, mit Reis</p></a>
+  </div>
+ </div>
+</section>
+
+<section class="menu" id="karte">
+ <div class="wrap">
+  <div class="head">
+   <span class="eyebrow">Speisekarte</span>
+   <h2>Unsere Karte</h2>
+   <p>Kategorie aufklappen, suchen oder nach vegetarisch und scharf filtern.</p>
+  </div>
+    <div class="tools">
+   <input type="search" id="q" placeholder="Gericht suchen, z. B. Garnelen" aria-label="Gericht suchen">
+   <button class="chip" data-f="veg">🌱 Vegetarisch</button>
+   <button class="chip" data-f="hot">🌶 Scharf</button>
+  </div>
+  <div id="menuacc"></div>
+  <p class="allerg">Allergene: A Gluten · B Krebstiere · C Ei · D Fisch · E Erdnuss · F Soja · G Milch · H Schalenfrüchte · L Sellerie · M Senf · N Sesam · O Sulfite · P Lupinen · R Weichtiere</p>
+ </div>
+</section>
+
+<section id="kochkurse">
+ <div class="wrap split">
+  <div class="panel red">
+   <span class="eyebrow">Kochkurse</span>
+   <h2>Kochen wie bei Li</h2>
+   <p>Asiatisch kochen lernen, direkt am Naschmarkt. Ideal auch als Geschenk oder Teamevent. Termine und Infos auf Anfrage.</p>
+   <a class="btn" style="background:#fff;color:var(--red)" href="tel:+4315854057">Termin anfragen</a>
+  </div>
+  <div class="panel" id="besuch">
+   <span class="eyebrow" style="color:var(--red)">Besuch uns</span>
+   <h2>Naschmarkt, Stand 126 bis 129</h2>
+   <table class="hours">
+    <tr><td>Montag bis Samstag</td><td>11:30 bis 23:00</td></tr>
+    <tr><td>Sonntag (nur im Sommer)</td><td>12:00 bis 18:00</td></tr>
+   </table>
+   <p style="margin:.4rem 0 1.2rem;color:var(--muted)">1060 Wien · U1, U2, U4 Karlsplatz</p>
+   <a class="btn btn-red" href="tel:+4315854057">📞 01 585 40 57</a>
+  </div>
+ </div>
+ <div class="wrap">
+  <div class="map"><iframe title="Karte Li's Cooking" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=16.3600%2C48.1970%2C16.3672%2C48.2004&layer=mapnik&marker=48.198693%2C16.36363"></iframe></div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div><strong style="color:#fff;font-family:'Cormorant Garamond',serif;font-size:1.3rem">Li's cooking</strong><br>Naschmarktstand 126 bis 129, 1060 Wien<br><a href="tel:+4315854057">01 585 40 57</a></div>
+  <div>Mo bis Sa 11:30 bis 23:00<br>So 12:00 bis 18:00 (Sommer)</div>
+  <div><a href="#">Impressum</a> · <a href="#">Datenschutz</a><br><a href="#">Deutsch</a> · <a href="#">English</a></div>
+ </div>
+</footer>
+
+<div class="mobilebar">
+ <a class="btn btn-red" href="tel:+4315854057">📞 Reservieren</a>
+ <a class="btn btn-ghost" href="#karte">Speisekarte</a>
+</div>
+
+<script>
+const D=[{"c": "Vorspeisen", "n": "V1", "t": "Coconut Sea", "d": "Zarte Garnelen mit Kokosmilch in pikantsäuerlicher Suppe mit Limetten und Basilikum", "p": "6,80", "a": "B, R", "e": "🥗", "hot": 1}, {"c": "Vorspeisen", "n": "V2", "t": "Tom Yam Goong Soup", "d": "Thailändische sauer-scharfe Suppe mit Riesengarnelen, Zitronengras, Limetten und Basilikum", "p": "6,80", "a": "B, R", "e": "🥗", "hot": 1}, {"c": "Vorspeisen", "n": "V3", "t": "Tom Ka Gai Soup", "d": "Zartes Hühnerfilet mit Kokosmilch in pikantsäuerlicher Suppe mit Limetten, Zitronengras und Basilikum", "p": "6,20", "a": "R", "e": "🥗"}, {"c": "Vorspeisen", "n": "V4a", "t": "Seafood Soup", "d": "", "p": "5,90", "a": "D, B", "e": "🥗"}, {"c": "Vorspeisen", "n": "V4b", "t": "Wan Tan Soup", "d": "Teigtaschen mit Hühnerfleisch in klarer Suppe", "p": "5,80", "a": "A", "e": "🥗"}, {"c": "Vorspeisen", "n": "V4c", "t": "Pikante Suppe", "d": "", "p": "4,80", "a": "C, F, A", "e": "🥗"}, {"c": "Vorspeisen", "n": "V5", "t": "Fish Soup", "d": "Mit frischem Lachs und Laksa-Sauce (Malaysia)", "p": "6,80", "a": "D, E, R", "e": "🥗"}, {"c": "Vorspeisen", "n": "V30", "t": "Miso Soup", "d": "", "p": "3,80", "a": "F", "e": "🥗"}, {"c": "Vorspeisen", "n": "V6", "t": "Thai Mango Duck Salad", "d": "Thailändischer Salat mit Mango, Ente, Gurken und Sojasprossen", "p": "7,80", "a": "D", "e": "🥗", "hot": 1}, {"c": "Vorspeisen", "n": "V7", "t": "Vietnam Beef Salad", "d": "Vietnam. Salat mit würzigem Rindf., Gurken, Sojasprossen, Limetten und Basilikum in säuerlicher vietnamesicher Sauce", "p": "9,80", "a": "D, R", "e": "🥗", "hot": 1}, {"c": "Vorspeisen", "n": "V8", "t": "Thai Green Papaya Salad", "d": "Thailändischer Grüner Papaya Salat mit Riesengarnelen, Gurken und Limetten", "p": "11,80", "a": "B, E", "e": "🥗", "hot": 1}, {"c": "Vorspeisen", "n": "V17", "t": "Fish Salad", "d": "", "p": "7,90", "a": "D, R", "e": "🥗"}, {"c": "Vorspeisen", "n": "V14", "t": "Satay Chicken Salat", "d": "", "p": "7,80", "a": "N", "e": "🥗"}, {"c": "Vorspeisen", "n": "V11", "t": "Vegetarisch Mix Salad", "d": "Grüner Salat mit Gurken, Tomaten, Avocado, Sojasprossen und Seetang in säuerlicher Thaisoße", "p": "6,50", "a": "keine", "e": "🥗", "veg": 1}, {"c": "Vorspeisen", "n": "V23", "t": "Avocado Seetang Salat", "d": "Avokado auf Seetang Salat mit Zwiebelsoße", "p": "6,90", "a": "keine", "e": "🥗", "veg": 1}, {"c": "Vorspeisen", "n": "V22", "t": "Li's Baby Rolle 2 Stk.", "d": "Frischer Lachs mit Gurken und Mango in Reispapier eingerollt", "p": "10,80", "a": "D", "e": "🥗"}, {"c": "Vorspeisen", "n": "V24", "t": "Wakame", "d": "Japanischer Algensalat", "p": "7,90", "a": "N", "e": "🥗"}, {"c": "Vorspeisen", "n": "V12", "t": "Vegetarian Roll 8 Stk.", "d": "", "p": "4,80", "a": "A", "e": "🥗", "veg": 1}, {"c": "Vorspeisen", "n": "V13", "t": "Geb. Wan Tan 5 Stk.", "d": "", "p": "3,90", "a": "A", "e": "🥗"}, {"c": "Vorspeisen", "n": "V10", "t": "Satay Chicken 2 Stk.", "d": "2 gegrillte Hühnerspiesse mit pikanter Erdnußsauce", "p": "4,80", "a": "E", "e": "🥗"}, {"c": "Vorspeisen", "n": "V15", "t": "Li's Home-made Gyoza 4 Stk.", "d": "4 hausgemachte japanische Teigtaschen", "p": "6,90", "a": "keine", "e": "🥗"}, {"c": "Vorspeisen", "n": "V16", "t": "Vietnamesische goldene Frühlingsrollen 3 Stk.", "d": "3 gebackene vietnamesische Frühlingsrollen mit Salat, Basilikum, Minzblättern, Sojasprossen und zartem Hühnerfilet", "p": "6,80", "a": "keine", "e": "🥗"}, {"c": "Vorspeisen", "n": "V18", "t": "Fresh Vietnam Rolls 2 Stk.", "d": "In frischem Reispapier eingerollt: Garnelen, Rind oder Hühnerfilet", "p": "6,80", "a": "B, R", "e": "🥗"}, {"c": "Vorspeisen", "n": "V28", "t": "Karate Kid", "d": "4 Frühlingsrollen, chinesische Nuggets, 2 vietnamesische gebackene Rollen und Wakame Salat", "p": "17,80", "a": "D, R", "e": "🥗"}, {"c": "Vorspeisen", "n": "V29", "t": "Thay Ladys", "d": "", "p": "15,80", "a": "B, E", "e": "🥗"}, {"c": "Vorspeisen", "n": "V9", "t": "Sashimi Salad", "d": "", "p": "12,80", "a": "D", "e": "🥗", "hot": 1}, {"c": "Vorspeisen", "n": "V19", "t": "Vietnam Vegetarian Roll", "d": "Avocado, Gurken, Karotten und Grünsalat in Reispapier eingerollt", "p": "7,90", "a": "E, N", "e": "🥗", "veg": 1}, {"c": "Vorspeisen", "n": "V21", "t": "Lachs Sashimi mit Wakame", "d": "", "p": "16,80", "a": "D, N", "e": "🥗"}, {"c": "Vorspeisen", "n": "V25", "t": "Hello Vietnam", "d": "", "p": "8,80", "a": "E, N", "e": "🥗"}, {"c": "Vorspeisen", "n": "V27", "t": "Vietnam Rose", "d": "", "p": "20,80", "a": "A, B, E, N", "e": "🥗"}, {"c": "Dim Sum", "n": "V32", "t": "Vegetarische Gyoza 4 Stk.", "d": "", "p": "6,90", "a": "A, B", "e": "🥟", "veg": 1}, {"c": "Dim Sum", "n": "V33", "t": "Teigtaschen mit Garnelen und Bärlauch 3 Stk.", "d": "", "p": "7,50", "a": "B, F", "e": "🥟"}, {"c": "Dim Sum", "n": "V34", "t": "Siew Mai 4 Stk.", "d": "", "p": "7,20", "a": "A, B, D, F", "e": "🥟"}, {"c": "Dim Sum", "n": "V35", "t": "Dim Sum Mix 4 Stk. (nach Wahl)", "d": "", "p": "10,80", "a": "keine", "e": "🥟"}, {"c": "Dim Sum", "n": "V36", "t": "Teigtaschen mit Garnelen 3 Stk.", "d": "", "p": "7,50", "a": "B, F", "e": "🥟"}, {"c": "Dim Sum", "n": "V37", "t": "Japan Gyoza mit Hühnerfleisch 4 Stk.", "d": "", "p": "6,90", "a": "A, F", "e": "🥟"}, {"c": "Dim Sum", "n": "V38", "t": "Spinat-Teigtaschen mit Garnelen", "d": "", "p": "7,50", "a": "B, F", "e": "🥟"}, {"c": "Dim Sum", "n": "V39", "t": "Hummer Teigtaschen (crispy) 3 Stk.", "d": "", "p": "7,20", "a": "A, B", "e": "🥟"}, {"c": "Dim Sum", "n": "V40", "t": "Vegetarisch Baozi (Neu)", "d": "Gedämpfte Teigtasche mit Gemüse, 1 Stk.", "p": "3,80", "a": "keine", "e": "🥟", "veg": 1}, {"c": "Sushi/Maki", "n": "S1", "t": "Sakura Maki 6 Stk.", "d": "Makirolle gefüllt und als Mantel mit Avocado und Lachs", "p": "12,90", "a": "D", "e": "🍣"}, {"c": "Sushi/Maki", "n": "S1b", "t": "Sake Philadelphia Maki 6 Stk.", "d": "Makirolle gefüllt mit Avocado und Frischkäse, als Mantel mit Lachs", "p": "14,50", "a": "D", "e": "🍣"}, {"c": "Sushi/Maki", "n": "S3", "t": "Japan Girl 8 Stk.", "d": "Makirolle gefüllt mit Avocado und frisch gebackenen Garnelen, in Lachs- oder Thunfisch-Mantel", "p": "Lachs 14,50 · Thunfisch 16,80", "a": "D, A, N", "e": "🍣"}, {"c": "Sushi/Maki", "n": "S4", "t": "Mix Rolls 12 Stk.", "d": "Gemischte Maki aus Lachs, Avocado, Gurke, California", "p": "9,80", "a": "D, N", "e": "🍣"}, {"c": "Sushi/Maki", "n": "S5", "t": "Tempura Maki 6 Stk.", "d": "Makirolle gefüllt mit gebackenen Garnelen, Avocado und Kaviar", "p": "11,90", "a": "N, B, A", "e": "🍣"}, {"c": "Sushi/Maki", "n": "S6", "t": "Just Maki 12 Stk./6 Stk.", "d": "Makirolle nach Wahl (eine Sorte): a) Avocado, Lachs oder Gurke 12 Stk. b) California Maki 6 Stk.", "p": "9,80", "a": "D, N", "e": "🍣"}, {"c": "Sushi/Maki", "n": "S7", "t": "Matcha Roll 8 Stk. (Neu)", "d": "Maki gefüllt mit Avocado, gebackenem Gemüse und Matcha Sauce", "p": "15,50", "a": "keine", "e": "🍣", "veg": 1}, {"c": "Sushi/Maki", "n": "S8", "t": "Spicy Tuna Maki 6 Stk.", "d": "", "p": "18,80", "a": "B, N, C", "e": "🍣", "hot": 1}, {"c": "Sushi/Maki", "n": "S9", "t": "Fujiyama Sushi 5 Stk.", "d": "", "p": "15,50", "a": "D, A, C, B", "e": "🍣"}, {"c": "Sushi/Maki", "n": "S10", "t": "Unagi Roll (Neu)", "d": "Makirolle gefüllt mit frischer Avocado und Gurken, als Mantel mit Aal", "p": "17,80", "a": "D, N", "e": "🍣"}, {"c": "Sushi/Maki", "n": "S11", "t": "Chirashi Sushi", "d": "Lachs, Thunfisch, Sashimi und Garnelen auf Reis", "p": "19,80", "a": "B, D, N", "e": "🍣"}, {"c": "Sushi/Maki", "n": "S12", "t": "Sushi Set Mix", "d": "a) klein 8 Sushi, 3 Maki b) groß 11 Sushi, 3 Maki", "p": "a) 14,90 · b) 18,80", "a": "D, B", "e": "🍣"}, {"c": "Sushi/Maki", "n": "S13", "t": "Lachs Sushi Set", "d": "a) klein 8 Sushi b) groß 12 Sushi", "p": "a) 15,80 · b) 20,50", "a": "B, D", "e": "🍣"}, {"c": "Sushi/Maki", "n": "S14", "t": "Thunfisch Sushi Set", "d": "a) klein 8 Sushi b) groß 12 Sushi", "p": "a) 17,80 · b) 23,80", "a": "D, B", "e": "🍣"}, {"c": "Sushi/Maki", "n": "S15", "t": "Sashimi", "d": "a) Mix klein 9 Stk. b) Mix groß 15 Stk. c) Lachs klein 9 Stk. d) Lachs groß 15 Stk. e) Thunfisch klein 9 Stk. f) Thunfisch groß 15 Stk.", "p": "ab 15,90", "a": "D", "e": "🍣"}, {"c": "Sushi/Maki", "n": "S17", "t": "Miami Maki (Neu)", "d": "Makirolle gefüllt mit frisch gebackenen Garnelen und Avocadomantel", "p": "17,90", "a": "B, A, D, N, C, E", "e": "🍣"}, {"c": "Sushi/Maki", "n": "S18", "t": "Li's Maki Plate for One", "d": "3 Japan Girl, 3 Sakura Maki, 3 Avocado Maki, 6 Lachs Maki", "p": "16,80", "a": "B, D, N, A", "e": "🍣"}, {"c": "Sushi/Maki", "n": "S19", "t": "Li's Maki Teller for Two", "d": "4 Lachs Sushi, 6 Japan Girl, 5 Spicy Chicken Maki, 4 Avocado Sushi, 3 California Maki, 6 Lachs Maki, 6 Avocado Maki mit 2 Miso Suppen", "p": "45,80", "a": "B, D, N, A", "e": "🍣"}, {"c": "Sushi/Maki", "n": "S20", "t": "Li's Cake Sushi 5 Stk.", "d": "", "p": "15,80", "a": "B", "e": "🍣"}, {"c": "Pho", "n": "PHO1", "t": "Pho Beef", "d": "Rinderfilet, Basilikum und Limetten in vietnamesischer Rindsuppe", "p": "13,90", "a": "R", "e": "🍜"}, {"c": "Pho", "n": "PHO2", "t": "Pho Chicken", "d": "Gebratenes Hühnerfilet mit Basilikum, Limetten und Sojabohnensprossen", "p": "12,80", "a": "R", "e": "🍜"}, {"c": "Pho", "n": "PHO3", "t": "Pho Duck", "d": "Knusprige Ente mit Basilikum, Limetten und Sojasprossen", "p": "13,90", "a": "R", "e": "🍜"}, {"c": "Pho", "n": "PHO4", "t": "Pho Shrimps & Fish", "d": "Gebratene Garnelen und Fishball mit Basilikum, Limetten und Sojasprossen", "p": "14,80", "a": "B, R", "e": "🍜"}, {"c": "Pho", "n": "PHO5", "t": "Pho Vegetables", "d": "Gebratenes Gemüse und Tofu mit Basilikum, Limetten und Sojasprossen in vietnamesischer Gemüsebrühe", "p": "11,90", "a": "F, R", "e": "🍜", "veg": 1}, {"c": "Pho", "n": "PHO6", "t": "Bun Nem", "d": "Reisnudeln mit vietnamesischen Frühlingsrollen, Salat und frischen Kräutern", "p": "a) Chicken 12,80 · b) Vegetables 11,80", "a": "D", "e": "🍜"}, {"c": "Asia, Thai & Vietnam", "n": "A1", "t": "Green Curry", "d": "Gebratene Meeresfrüchte, Hühnerfilet, Garnelen oder Tofu mit frischem Gemüse in Green Curry Sauce auf Thai-Art", "p": "ab 11,80", "a": "B, D, R", "e": "🍛", "hot": 1}, {"c": "Asia, Thai & Vietnam", "n": "A2", "t": "Szechuan", "d": "Gebratenes Hühnerfilet oder Beiried mit frischem Gemüse auf Szechuan-Art", "p": "a) 13,90 · b) 15,50", "a": "F", "e": "🍛", "hot": 1}, {"c": "Asia, Thai & Vietnam", "n": "A3", "t": "Red Curry", "d": "Gebratenes Beiried, Hühnerfilet oder Garnelen mit frischem Gemüse in Red Curry Sauce", "p": "ab 11,80", "a": "B, D, R", "e": "🍛", "hot": 1}, {"c": "Asia, Thai & Vietnam", "n": "A4", "t": "Satay Chicken with Vegetables", "d": "Gebratenes Hühnerfilet mit frischem Gemüse in Erdnusssoße", "p": "13,90", "a": "E", "e": "🍛"}, {"c": "Asia, Thai & Vietnam", "n": "A5", "t": "Thai Mango", "d": "Gebratene Ente, Hühnerfilet, Garnelen oder Beiried mit frischem Gemüse in hausgemachter Mangosoße auf Thai-Art", "p": "ab 14,80", "a": "B, F", "e": "🍛"}, {"c": "Asia, Thai & Vietnam", "n": "A7", "t": "Gan Bian Beef", "d": "Geröstetes Beiried mit hausgemachter Gan Bian-Soße auf Szechuan-Art mit Zucchini und Karotten", "p": "15,90", "a": "F", "e": "🍛", "hot": 1}, {"c": "Asia, Thai & Vietnam", "n": "A8", "t": "Red Curry Duck", "d": "Knusprige Ente mit hausgemachter Limettensauce", "p": "16,90", "a": "keine", "e": "🍛", "hot": 1}, {"c": "Asia, Thai & Vietnam", "n": "A9", "t": "Fried Salmon with Vegetables", "d": "Gebratenes Lachsfilet mit frischem Gemüse, wahlweise Teriyaki oder Red Curry Sauce", "p": "17,80", "a": "D", "e": "🍛"}, {"c": "Asia, Thai & Vietnam", "n": "A10", "t": "Fried Pak Choi", "d": "Gebratenes frisches Pak Choi mit Knoblauch-Sauce", "p": "13,90", "a": "F", "e": "🍛"}, {"c": "Asia, Thai & Vietnam", "n": "A12", "t": "Bulgogi Beef", "d": "Würziges Beiried mit Zwiebeln, Porree und Knoblauch auf koreanische Art", "p": "16,90", "a": "F", "e": "🍛"}, {"c": "Asia, Thai & Vietnam", "n": "A14", "t": "Chicken with Cashew Nuts in Ricebowl", "d": "Gebratenes Hühnerfilet mit Lemongrass und Cashewnüssen in handgemachtem Schälchen aus Reis", "p": "15,80", "a": "H", "e": "🍛"}, {"c": "Asia, Thai & Vietnam", "n": "A15", "t": "Pineapple Beef", "d": "Gebratenes zartes Beiried mit frischer Ananas", "p": "18,90", "a": "F", "e": "🍛"}, {"c": "Asia, Thai & Vietnam", "n": "A16", "t": "Acht Schätze", "d": "Huhn, Ente, Beiried und Garnelen in einer Acht Schätze-Sauce", "p": "15,90", "a": "F", "e": "🍛", "hot": 1}, {"c": "Asia, Thai & Vietnam", "n": "A18", "t": "No Fish Mix", "d": "Knuspriges Hühnerfilet mit Limettensoße, Nudeln mit Ente und Bulgogi Rindfleisch", "p": "17,80", "a": "A, C, F", "e": "🍛"}, {"c": "Asia, Thai & Vietnam", "n": "A19", "t": "Tempura Shrimp", "d": "4 Stk. Garnelen mit Gemüse", "p": "20,80", "a": "A, B", "e": "🍛"}, {"c": "Asia, Thai & Vietnam", "n": "A21", "t": "Crispy Duck", "d": "Knusprige Ente mit gebratenem Gemüse und hausgemachter Knoblauchsoße", "p": "18,90", "a": "A, F", "e": "🍛"}, {"c": "Asia, Thai & Vietnam", "n": "A26", "t": "Crispy Chicken", "d": "Knuspriges Huhn und gebratene Sojasprossen mit hausgemachter Knoblauchsoße", "p": "14,80", "a": "A", "e": "🍛"}, {"c": "Asia, Thai & Vietnam", "n": "A27", "t": "Sesam Chicken", "d": "", "p": "15,80", "a": "A", "e": "🍛"}, {"c": "Asia, Thai & Vietnam", "n": "A28", "t": "Lemon Chicken", "d": "Knuspriges Huhn mit Lemon-Sauce (süßsauer)", "p": "14,80", "a": "A", "e": "🍛"}, {"c": "Hot Pan & Pot", "n": "H1", "t": "Thai Style Beef", "d": "Rinderfilet mit frischem Gemüse in hausgemachter Thai-Sauce, in der heißen Pfanne serviert", "p": "28,80", "a": "F", "e": "🔥"}, {"c": "Hot Pan & Pot", "n": "H2", "t": "Hot Pan Prawns", "d": "Gebratene Riesengarnelen mit frischem Gemüse in hausgemachter Thai-Sauce, in der heißen Pfanne serviert", "p": "20,80", "a": "B, F", "e": "🔥"}, {"c": "Hot Pan & Pot", "n": "H3", "t": "Hot Pan Duck", "d": "Knusprige Ente mit frischem Gemüse in hausgemachter Peking-Sauce, in der heißen Pfanne serviert", "p": "19,80", "a": "A, F", "e": "🔥"}, {"c": "Hot Pan & Pot", "n": "H4", "t": "Hot Pan Salmon", "d": "Gebackenes Lachsfilet mit frischem Gemüse in hausgemachter Thai-Sauce, in der heißen Pfanne serviert", "p": "18,90", "a": "D, F", "e": "🔥"}, {"c": "Hot Pan & Pot", "n": "H5", "t": "Hot Pan Tofu (small Pan)", "d": "Gebackener Tofu mit frischem Gemüse in Pekingsauce, in der heißen Pfanne serviert", "p": "14,80", "a": "A, F", "e": "🔥", "veg": 1}, {"c": "Hot Pan & Pot", "n": "H6", "t": "Li's Chicken Hot Pot", "d": "Gebratenes Hühnerfilet mit frischem Gemüse in hausgemachter Curry-Sauce im thailändischen Hot Pot", "p": "15,50", "a": "keine", "e": "🔥", "hot": 1}, {"c": "Hot Pan & Pot", "n": "H10", "t": "Hot Pan Seafood Noodles", "d": "Gebratene Nudeln mit frischen Meeresfrüchten in der heißen Pfanne", "p": "16,80", "a": "A, B, C, D, R", "e": "🔥"}, {"c": "Nudeln & Reis", "n": "D1", "t": "Vegetable Noodles oder Noodlesoup", "d": "Hausgemachte Nudeln mit frischem Gemüse und Tofu", "p": "9,80", "a": "C, F, A", "e": "🍝", "veg": 1}, {"c": "Nudeln & Reis", "n": "D2", "t": "Seafood Laksa Noodlesoup", "d": "Hausgemachte Nudeln mit Garnelen und Fischfilets in Laksa-Sauce", "p": "14,50", "a": "B, D, E, C, A", "e": "🍝"}, {"c": "Nudeln & Reis", "n": "D4", "t": "Thai Style Fried Noodles", "d": "Gebratene Nudeln mit Beiried, Basilikum und Gemüse in roter Currysoße", "p": "11,90", "a": "C, A", "e": "🍝", "hot": 1}, {"c": "Nudeln & Reis", "n": "D5", "t": "Mama Noodle Soup", "d": "Reisnudeln mit zartem Beiried, Kokosnuss und frischem Gemüse in thailändischer Rindssuppe", "p": "13,50", "a": "keine", "e": "🍝"}, {"c": "Nudeln & Reis", "n": "D7", "t": "Bali Noodlesoup", "d": "Reisnudelsuppe mit zartem Rinderfilet, Riesengarnelen, Limetten, Basilikum und Sojasprossen", "p": "13,90", "a": "keine", "e": "🍝", "hot": 1}, {"c": "Nudeln & Reis", "n": "D8", "t": "Crispy Duck Noodles", "d": "Gebratene Nudeln mit knuspriger Ente und frischem Gemüse in hausgemachter Pekingsauce", "p": "12,80", "a": "C, F, A", "e": "🍝"}, {"c": "Nudeln & Reis", "n": "D9", "t": "Pad Thai", "d": "Mit Prawns, Beef, Chicken oder Tofu", "p": "ab 13,50", "a": "B, D, E, F, N", "e": "🍝"}, {"c": "Nudeln & Reis", "n": "D9c", "t": "Pad Thai Chicken", "d": "", "p": "12,50", "a": "keine", "e": "🍝"}, {"c": "Nudeln & Reis", "n": "D12", "t": "Fried Noodles with Prawns 4 Stk.", "d": "", "p": "15,50", "a": "B, C, F, A", "e": "🍝"}, {"c": "Nudeln & Reis", "n": "D12a", "t": "Fried Rice with Prawns 4 Stk.", "d": "", "p": "15,50", "a": "A, B, C, F", "e": "🍝"}, {"c": "Nudeln & Reis", "n": "D13", "t": "Fried Rice with Pineapple", "d": "a) Chicken und Garnelen b) Gemüse", "p": "a) 13,80 · b) 12,50", "a": "B, C", "e": "🍝"}, {"c": "Nudeln & Reis", "n": "D14", "t": "Thai Style Fried Rice", "d": "Gebratener Reis mit zartem Beiried, Hühnerfilet, Riesengarnelen und frischem Gemüse in scharfer Thai-Sauce", "p": "14,80", "a": "keine", "e": "🍝", "hot": 1}, {"c": "Nudeln & Reis", "n": "D15", "t": "Fried Noodles with Chicken", "d": "", "p": "11,80", "a": "A, C, F", "e": "🍝"}, {"c": "Nudeln & Reis", "n": "D17", "t": "Fried Rice with Chicken", "d": "", "p": "11,80", "a": "C", "e": "🍝"}, {"c": "Nudeln & Reis", "n": "D18", "t": "Hong Kong Duck Noodlesoup", "d": "Knusprige Ente mit Pak Choi und Sojabohnensprossen in Nudelsuppe", "p": "12,90", "a": "A, C, F", "e": "🍝"}, {"c": "Li's Mix Menü", "n": "M2", "t": "Satay Chicken Noodles", "d": "Gebratene Nudeln mit 2 Hühnerspießen in Erdnusssoße, 3 Maki, 3 Gemüserollen und Miso Suppe", "p": "12,90", "a": "E, C, N", "e": "🍱"}, {"c": "Li's Mix Menü", "n": "M3", "t": "Mango Chicken Roll", "d": "Makirolle mit frittiertem Hühnerfleisch, Mango, Gurke und Avocado, mit Miso Suppe", "p": "14,50", "a": "B, H, R", "e": "🍱"}, {"c": "Li's Mix Menü", "n": "M5", "t": "Szechuan Chicken Menü", "d": "Gebratenes Hühnerfilet mit frischem Gemüse in pikanter Bohnensoße, 6 Maki, Pikante Suppe und Reis", "p": "13,90", "a": "F, N", "e": "🍱", "hot": 1}, {"c": "Li's Mix Menü", "n": "M6", "t": "Crispy Chicken with Fried Rice", "d": "Knuspriges Hühnerfleisch mit gebratenem Reis und Miso Suppe", "p": "13,90", "a": "keine", "e": "🍱"}, {"c": "Li's Mix Menü", "n": "M7", "t": "Red Curry Vegetable Menü", "d": "Gebratenes Gemüse in roter Currysoße, 6 Avocado Maki, Miso Suppe und Reis", "p": "12,90", "a": "N", "e": "🍱", "hot": 1}, {"c": "Li's Mix Menü", "n": "M8", "t": "Thai Menü", "d": "Gebratene Nudeln mit Beiried und Basilikum in roter Currysoße, 6 Maki und Miso Suppe", "p": "13,50", "a": "N", "e": "🍱", "hot": 1}, {"c": "Li's Mix Menü", "n": "M10", "t": "Hong Kong Duck Menü", "d": "Gebratene Nudeln mit knuspriger Ente und Entensoße, mit Pikanter Suppe", "p": "14,90", "a": "D, N", "e": "🍱"}, {"c": "Li's Mix Menü", "n": "M11", "t": "Thai Red Curry Menü", "d": "Beiried oder Ente mit Gemüse und Basilikum in roter Currysoße, 1 Sushi, 3 Maki, Pikante Suppe und Reis", "p": "a) 14,80 · b) 15,90", "a": "D, N", "e": "🍱", "hot": 1}, {"c": "Li's Mix Menü", "n": "M12", "t": "Japan Teriyaki Menü", "d": "Gegrilltes Lachs- oder Thunfischfilet in Teriyakisoße, 2 Sushi und Miso Suppe", "p": "15,50", "a": "D, N", "e": "🍱"}, {"c": "Li's Mix Menü", "n": "M14", "t": "Thai Green Curry Menü", "d": "Hühnerfilet oder 6 Riesengarnelen mit Gemüse in Green Curry, 3 Maki, 2 Gemüserollen, Miso Suppe und Reis", "p": "a) 14,50 · b) 17,80", "a": "B, D, N, R", "e": "🍱", "hot": 1}, {"c": "Li's Mix Menü", "n": "M15", "t": "Thai Mango Menü", "d": "Ente oder 6 Prawns mit Mango, Zitronengras und Limetten in Mangosauce, 2 Lachssushi, 3 Lachsmaki, Miso Suppe und Reis", "p": "a) 15,80 · b) 17,90", "a": "B, D, N", "e": "🍱"}, {"c": "Li's Mix Menü", "n": "M16", "t": "Li's Lemon Chicken", "d": "3 Maki, chinesische Nuggets mit Lemon Sauce (süßsauer), Pikante Suppe und Reis", "p": "14,50", "a": "keine", "e": "🍱"}, {"c": "Li's Mix Menü", "n": "M17", "t": "Sushi Box Menü", "d": "3 Gemüserollen, 6 Sushi, 3 Avocadomaki, 3 Lachsmaki und Miso Suppe", "p": "14,90", "a": "D, N", "e": "🍱"}, {"c": "Li's Mix Menü", "n": "M18", "t": "Maki Plate", "d": "3 Japan Girl, 3 Avocadomaki, 3 Lachsmaki, 3 California Maki, 3 Gurken Maki und Miso Suppe", "p": "14,50", "a": "A, D, N", "e": "🍱"}, {"c": "Li's Mix Menü", "n": "M21", "t": "Thai King's Menü", "d": "Reisnudeln mit Rindfleisch und Ananas in Li's Thai Sauce (leicht scharf), mit Tom Ka Gai Soup", "p": "14,50", "a": "R", "e": "🍱"}, {"c": "Li's Mix Menü", "n": "L1", "t": "Loveboat", "d": "4 Sashimi, Thai Style Rinderfilet, Thai Papaya Salat mit Ananas, Miso Suppe und Reis", "p": "19,80", "a": "D, B, R", "e": "🍱"}, {"c": "Li's Mix Menü", "n": "L2", "t": "Li's Special Sushi Plate", "d": "6 Sushi, 3 Japan Girl Maki, 1 frische Vietnam-Rolle und Miso Suppe", "p": "18,80", "a": "B, C, F", "e": "🍱"}, {"c": "Li's Mix Menü", "n": "L3", "t": "Li's Private Plate", "d": "3 Lachs Sushi, 1 Papaya Salat, gebackenes Lachsfilet mit Gemüse, 1 Suppe nach Wahl", "p": "25,80", "a": "B, C, F", "e": "🍱"}, {"c": "Li's Mix Menü", "n": "L4", "t": "Chicken Plate mit Cashewnüssen", "d": "2 frische Vietnam-Rollen, Hühnerfleisch mit Cashewnüssen, Gemüse, Reis und Miso Suppe", "p": "17,80", "a": "B, C, F", "e": "🍱"}, {"c": "Li's Mix Menü", "n": "L5", "t": "Li's Fantastic Plate", "d": "4 Lachs-Sashimi, 2 Fujiyama Sushi, 3 Special Tuna Maki, 3 California Maki und Miso Suppe", "p": "21,80", "a": "B, C, F", "e": "🍱"}, {"c": "Li's Mix Menü", "n": "L6", "t": "Korean Taste Plate", "d": "6 Sushi, 3 frittierte Riesengarnelen, Bulgogi, Reis und Miso Suppe", "p": "19,80", "a": "B, C, F", "e": "🍱"}, {"c": "Li's Mix Menü", "n": "L7", "t": "Salmon Plate", "d": "3 Japan Girl Maki, 2 Lachs-Sushi, Lachsfilet mit Gemüse, Reis und Misosuppe, mit Teriyaki oder Red Curry Sauce", "p": "22,80", "a": "C, B, F", "e": "🍱"}, {"c": "Li's Mix Menü", "n": "L8", "t": "Sashimi and Beef Plate", "d": "5 Lachs-Sashimi, 2 Japan Gyoza, Rindfilet mit Brokkoli, Reis und Miso Suppe", "p": "23,80", "a": "B, C, F", "e": "🍱"}, {"c": "Li's Mix Menü", "n": "L9", "t": "Li's Crispy Duck Plate", "d": "3 Japan Girl Maki, 2 Homemade Gyoza, knusprige Ente mit Gemüse, Reis und Miso Suppe", "p": "19,80", "a": "B, C, F", "e": "🍱"}, {"c": "Li's Mix Menü", "n": "L10", "t": "Peking Duck", "d": "6 Teigfladen mit knuspriger Ente, Gurken, Porree und Pekingsoße, mit Pikanter Suppe", "p": "18,80", "a": "A, C, F", "e": "🍱"}, {"c": "Li's Mix Menü", "n": "L11", "t": "Li's Saturday I (Satay Chicken Noodle)", "d": "Gebratene Nudeln mit 2 Hühnerspießen in Erdnusssoße, 6 Avocado Maki, 3 Gemüserollen und Miso Suppe", "p": "15,50", "a": "B, C, F", "e": "🍱"}, {"c": "Li's Mix Menü", "n": "L12", "t": "Li's Saturday II (Duck Noodle Menü)", "d": "Gebratene Nudeln mit knuspriger Ente und Entensoße, 2 Lachs Sushi, 3 Gemüserollen und Pikante Suppe", "p": "16,90", "a": "keine", "e": "🍱"}, {"c": "Desserts", "n": "N1", "t": "Fried Banana", "d": "", "p": "5,20", "a": "A", "e": "🍡"}, {"c": "Desserts", "n": "N2", "t": "Fried Coconutmilk", "d": "", "p": "4,80", "a": "C", "e": "🍡"}, {"c": "Desserts", "n": "N3", "t": "Mochi", "d": "Klebreistaschen", "p": "4,90", "a": "keine", "e": "🍡"}, {"c": "Desserts", "n": "N4", "t": "Matcha-Kokospudding", "d": "", "p": "4,80", "a": "keine", "e": "🍡"}, {"c": "Desserts", "n": "N5", "t": "Thai Sticky Rice with Mango", "d": "", "p": "8,80", "a": "keine", "e": "🍡"}, {"c": "Desserts", "n": "N6", "t": "Li's Dessert Teller für zwei", "d": "Sticky Rice with Mango und gebackene Kokosmilch", "p": "12,80", "a": "keine", "e": "🍡"}, {"c": "Sushi Sets", "n": "Lis 1", "t": "My Best Friend Special (1 Person)", "d": "2 Lachs Sushi, 2 Thunfisch Sushi, 2 Ebi Sushi, 6 Sashimi, 6 Avocado Maki", "p": "18,80", "a": "D, N", "e": "🍣"}, {"c": "Sushi Sets", "n": "Lis 2", "t": "Mini One (1 Person)", "d": "2 Fujiyama Sushi, 3 Lachs Sushi, 3 Japan Girl, 3 Lachs Maki, 3 Avocado Maki", "p": "17,80", "a": "A, D, N, B, C, F", "e": "🍣"}, {"c": "Sushi Sets", "n": "Lis 3", "t": "Vegetarian Plate (1 Person)", "d": "4 Matcha Roll, 4 Avocado Sushi, 6 Avocado Maki", "p": "16,50", "a": "A, C, F, N", "e": "🍣", "veg": 1}, {"c": "Sushi Sets", "n": "Lis 4", "t": "Small Ship (1 Person)", "d": "6 Lachs Sashimi, 3 Lachs Sushi, 3 Thunfisch Sushi, 6 Japan Girl, 1 California Temaki", "p": "22,80", "a": "A, B, D, N", "e": "🍣"}, {"c": "Sushi Sets", "n": "Lis 5", "t": "Kyoto Plate (1 Person)", "d": "3 Lachs Sushi, 2 Thunfisch Sushi, 2 Avocado Sushi, 2 Ebi Sushi, 3 Japan Girl, 3 Special Chicken Maki", "p": "21,80", "a": "A, B, D, N", "e": "🍣"}, {"c": "Sushi Sets", "n": "Lis 6", "t": "Hokkaido Plate (1 Person)", "d": "4 Thunfisch Sashimi, 3 Lachs Sushi, 3 Thunfisch Sushi, 2 Ebi Sushi, 3 Spicy Tuna Maki", "p": "23,90", "a": "A, N, B, D", "e": "🍣"}, {"c": "Sushi Sets", "n": "Lis 8", "t": "Osaka Plate (1 Person)", "d": "4 Lachs Sashimi, 3 Lachs Sushi, 3 Avocado Sushi, 3 Japan Girl, 2 Fujiyama Sushi", "p": "19,80", "a": "A, B, D, N", "e": "🍣"}, {"c": "Sushi Sets", "n": "Lis A", "t": "Mr. Li's Teller (2 Personen)", "d": "2 Suppen nach Wahl, 4 Japan Dim Sum nach Wahl, 5 Lachs Sashimi, 2 Lachs Sushi, 2 Thunfisch Sushi, 2 Fujiyama Sushi, 4 Japan Girl, dazu Rindersteak oder knusprige Ente", "p": "55,80", "a": "A, B, D, N", "e": "🍣"}, {"c": "Sushi Sets", "n": "Lis B", "t": "Mr. Li's Favorite \"You and Her\" (2 Personen)", "d": "4 Lachs Sushi, 2 Avocado Sushi, 6 Japan Girl, 4 Fujiyama Sushi, 4 Matcha Roll, 1 Salat nach Wahl, 2 Suppen nach Wahl, 1 Nachtisch", "p": "52,80", "a": "A, B, D, N", "e": "🍣"}, {"c": "Sushi Sets", "n": "Lis C", "t": "Li's Best Love (2 Personen)", "d": "4 Lachs Sushi, 4 Thunfisch Sushi, 4 Avocado Sushi, 2 Fujiyama Sushi, 6 Japan Girl, 6 Avocado Maki, 2 Li's Baby Roll, 4 Special Chicken Maki, 2 Miso Suppen", "p": "46,90", "a": "A, B, D, N", "e": "🍣"}, {"c": "Sushi Sets", "n": "Lis D", "t": "Happy Birthday (2 Personen)", "d": "8 Sashimi, 4 Lachs, 4 Thunfisch, 2 Ebi Sushi, 4 Avocado Sushi, 2 Ika Sushi, 2 Fujiyama Sushi, 3 Special Tuna Maki, 4 Special Chicken Maki, 3 Japan Girl, 3 Avocado Maki, 1 Salat nach Wahl", "p": "54,80", "a": "A, B, D, N", "e": "🍣"}, {"c": "Sushi Sets", "n": "Lis E", "t": "Li's Schatzschiff (3 Personen)", "d": "4 Gänge: Suppe nach Wahl, Salat oder 6 Japan Gyoza, großes Sushi und Sashimi Schiff, Dessert Teller", "p": "83,80", "a": "A, B, D, F, N", "e": "🍣"}];
+const cats=[...new Set(D.map(x=>x.c))];
+let f={veg:0,hot:0},openCat=null;
+const box=document.getElementById("menuacc"),q=document.getElementById("q");
+document.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{f[b.dataset.f]^=1;b.classList.toggle("on");draw()});
+q.oninput=draw;
+document.querySelectorAll("[data-go]").forEach(a=>a.addEventListener("click",()=>{openCat=a.dataset.go;draw();setTimeout(()=>{const d=[...box.children].find(x=>x.dataset.c==openCat);if(d)d.scrollIntoView({behavior:"smooth",block:"start"})},50)}));
+function card(x){return `<article class="dish"><div class="pic" role="img" aria-label="${x.t}">${x.e}</div><div class="body"><div class="top"><h3><span class="nr">${x.n}</span>${x.t}</h3><span class="price">€ ${x.p}</span></div><p>${x.d}</p><div class="tags">${x.hot?'<span class="tag hot">🌶 scharf</span>':""}${x.veg?'<span class="tag veg">🌱 vegetarisch</span>':""}<span class="tag">Allergene ${x.a}</span></div></div></article>`}
+function draw(){const s=q.value.toLowerCase(),filtering=s||f.veg||f.hot;
+ const open=new Set([...box.querySelectorAll("details[open]")].map(d=>d.dataset.c));
+ if(openCat){open.add(openCat);openCat=null}
+ let html="",any=0;
+ for(const c of cats){const r=D.filter(x=>x.c==c&&(!f.veg||x.veg)&&(!f.hot||x.hot)&&(x.t+x.d).toLowerCase().includes(s));
+  if(!r.length)continue;any=1;
+  html+=`<details class="acc" data-c="${c}"${filtering||open.has(c)?" open":""}><summary>${c}<span class="cnt">${r.length}</span></summary><div class="dishes">${r.map(card).join("")}</div></details>`}
+ box.innerHTML=any?html:'<p style="color:#bdb0b0">Nichts gefunden.</p>'}
+draw();
+</script>
+</body>
+</html>

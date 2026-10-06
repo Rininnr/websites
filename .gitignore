@@ -1,0 +1,13 @@
+# Kunden- und Kontaktlisten, private Daten
+*.csv
+*.xlsx
+kundenliste*
+# Secrets
+.env
+.env.*
+*.key
+*.pem
+# System
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quick Yammy Wien | Wok, Noodle &amp; Sushi bei der TU</title>
+<meta name="description" content="Quick Yammy in der Wiedner Hauptstraße 3, 1040 Wien: Wok-Gerichte, Nudeln, Reis, Sushi und Maki. Schnell, günstig, vor Ort oder zum Mitnehmen. Auch sonntags offen.">
+<meta property="og:title" content="Quick Yammy Wien | Wok, Noodle &amp; Sushi">
+<meta property="og:description" content="Schnell, frisch, asiatisch. Gleich gegenüber der TU Wien.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6fbec;--card:#fff;--sand:#e9f4d3;--tint:#eef7dc;
+  --text:#27311d;--muted:#5f6b52;--line:#d6e8bb;
+  --coral:#ee5238;--green:#6fb43f;--green-deep:#2f5a17;--cream:#f6fbec;
+  --r:2rem
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"DM Sans",system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+h1,h2,h3,.display{font-family:"Fraunces",Georgia,serif;letter-spacing:-.02em;margin:0}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.demo{background:var(--green-deep);color:var(--cream);text-align:center;font-size:.8rem;padding:6px 12px}
+
+/* header */
+header{position:sticky;top:0;z-index:30;background:rgba(246,251,236,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--coral)}
+.logo svg{width:36px;height:36px}
+.logo .display{font-size:1.5rem;line-height:1}
+.logo small{display:block;font-family:"DM Sans";font-size:.62rem;letter-spacing:.08em;color:var(--muted);font-weight:500;margin-top:3px}
+nav{display:flex;gap:28px;font-size:.92rem;color:var(--muted)}
+nav a{text-decoration:none;transition:color .2s}
+nav a:hover{color:var(--coral)}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--coral);color:#fff;text-decoration:none;font-weight:500;padding:10px 20px;border-radius:999px;font-size:.92rem;transition:opacity .2s}
+.pill:hover{opacity:.9}
+
+/* hero */
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center;padding-top:72px;padding-bottom:88px}
+.eyebrow{font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--coral);margin:0 0 16px;font-weight:500}
+h1{font-size:clamp(2.4rem,6vw,4.1rem);line-height:1.04}
+h1 em{font-style:normal;color:var(--coral)}
+.lead{font-size:1.15rem;color:var(--muted);max-width:30rem;margin:22px 0 0}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:999px;font-weight:500;text-decoration:none;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:var(--coral);color:#fff;box-shadow:0 6px 18px rgba(238,82,56,.28)}
+.btn.ghost{border:1px solid var(--line);background:var(--card)}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.badge{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-size:.88rem;box-shadow:0 1px 3px rgba(60,90,20,.06)}
+.hero-art{position:relative}
+.bowl{aspect-ratio:1/1;border-radius:2.5rem;background:linear-gradient(145deg,#b6e47c,#6fb43f);box-shadow:0 24px 50px rgba(60,100,20,.25);display:grid;place-items:center;overflow:hidden;position:relative}
+.bowl::before{content:"";position:absolute;width:70%;height:70%;border-radius:50%;background:rgba(255,255,255,.2);top:-15%;right:-15%}
+.bowl svg{width:62%;height:auto;position:relative}
+.float{position:absolute;left:-18px;bottom:-22px;max-width:14rem;background:var(--card);border-radius:1.5rem;padding:16px 18px;box-shadow:0 14px 34px rgba(40,70,10,.16);font-size:.9rem;color:var(--muted)}
+.float b{display:block;color:var(--green-deep);font-family:"Fraunces",serif;font-size:1.05rem;margin-bottom:2px}
+
+/* sections */
+section{padding:88px 0}
+.alt{background:var(--sand)}
+.tint{background:var(--tint)}
+h2{font-size:clamp(1.9rem,4vw,2.7rem);line-height:1.1}
+.sub{color:var(--muted);max-width:34rem;margin:12px 0 0}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.photo{aspect-ratio:4/3;border-radius:2.5rem;background:linear-gradient(135deg,#f9d8cf,#ee5238 140%);display:grid;place-items:center;font-size:5rem;box-shadow:0 18px 40px rgba(238,82,56,.2)}
+.split p{color:var(--muted);font-size:1.08rem;margin:18px 0 0}
+.link{display:inline-block;margin-top:24px;font-weight:500;color:var(--coral);border-bottom:2px solid var(--coral);padding-bottom:3px;text-decoration:none}
+
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin-top:40px}
+.card{background:var(--card);border-radius:var(--r);overflow:hidden;box-shadow:0 2px 10px rgba(60,90,20,.07);transition:box-shadow .3s,transform .3s}
+.card:hover{box-shadow:0 18px 40px rgba(60,90,20,.15);transform:translateY(-4px)}
+.card .img{aspect-ratio:16/9;display:grid;place-items:center;font-size:3.6rem}
+.c1 .img{background:linear-gradient(135deg,#ffe0b8,#ffb067)}
+.c2 .img{background:linear-gradient(135deg,#fff1c2,#f7c948)}
+.c3 .img{background:linear-gradient(135deg,#ffd4cc,#ee7a66)}
+.c4 .img{background:linear-gradient(135deg,#d8f0b8,#8fcf5a)}
+.card .body{padding:24px}
+.card h3{font-size:1.5rem}
+.card p{margin:8px 0 0;color:var(--muted)}
+.note{margin-top:34px;color:var(--muted)}
+.note a{color:var(--coral);font-weight:500}
+
+blockquote{margin:0;background:var(--card);border-radius:var(--r);padding:28px;box-shadow:0 2px 10px rgba(60,90,20,.07)}
+blockquote p{font-family:"Fraunces",serif;font-size:1.2rem;line-height:1.35;margin:0}
+blockquote footer{margin-top:14px;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:40px}
+.quotes blockquote:first-child{grid-column:span 2}
+.quotes blockquote:first-child p{font-size:1.6rem}
+.src{margin-top:18px;font-size:.85rem;color:var(--muted)}
+
+.loc{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.addr{display:flex;gap:12px;margin-top:22px;font-size:1.1rem}
+.times{margin-top:22px;background:var(--sand);border-radius:var(--r);padding:26px}
+.times .t{font-weight:700;margin-bottom:10px}
+.times .r{display:flex;justify-content:space-between;gap:16px;padding:7px 0;color:var(--muted);border-bottom:1px solid var(--line)}
+.times .r:last-child{border:0}
+.times .closed{color:var(--coral);font-weight:500}
+.map{border-radius:var(--r);overflow:hidden;min-height:340px;box-shadow:0 14px 34px rgba(40,70,10,.15)}
+.map iframe{width:100%;height:100%;min-height:340px;border:0}
+
+.contact{text-align:center;max-width:720px;margin:0 auto}
+.contact .btns{justify-content:center}
+.cash{display:inline-block;margin-top:26px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:10px 20px;font-size:.92rem;color:var(--muted)}
+
+footer{background:var(--green-deep);color:var(--cream)}
+footer .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;padding-top:52px;padding-bottom:52px;font-size:.92rem}
+footer .display{font-size:1.6rem}
+footer p{margin:10px 0 0;opacity:.85}
+footer b{display:block;margin-bottom:10px}
+footer a{text-underline-offset:4px}
+
+@media(max-width:820px){
+  nav{display:none}
+  .hero .wrap,.split,.loc{grid-template-columns:1fr;gap:36px}
+  .hero .wrap{padding-top:44px;padding-bottom:64px}
+  .cards,.quotes{grid-template-columns:1fr}
+  .quotes blockquote:first-child{grid-column:auto}
+  footer .wrap{grid-template-columns:1fr}
+  section{padding:60px 0}
+  .float{left:12px}
+}
+</style>
+</head>
+<body>
+<div class="demo">Entwurf / Beispielseite, noch nicht veröffentlicht</div>
+
+<header><div class="wrap">
+  <a class="logo" href="#top">
+    <svg viewBox="0 0 40 40" aria-hidden="true"><g stroke="#ee5238" stroke-width="2.4" stroke-linecap="round" fill="none"><path d="M12 4v14M17 4v14M22 4v14M27 4v14"/><path d="M8 9h22"/></g><path d="M5 20h30a15 15 0 0 1-30 0z" fill="#ee5238"/></svg>
+    <div><span class="display">Quick Yammy</span><small>WOK | NOODLE | SUSHI</small></div>
+  </a>
+  <nav><a href="#kueche">Küche</a><a href="#gaeste">Gäste</a><a href="#standort">Standort</a><a href="#kontakt">Kontakt</a></nav>
+  <a class="pill" href="tel:+43013471212">📞 <span>01/347 12 12</span></a>
+</div></header>
+
+<main id="top">
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <p class="eyebrow">Wiedner Hauptstraße 3 · 1040 Wien</p>
+    <h1>Schnell. Frisch.<br><em>Richtig yammy.</em></h1>
+    <p class="lead">Wok-Gerichte, Nudeln und Reis, dazu Sushi und Maki. Gleich gegenüber der TU Wien: bestellen, kurz warten, genießen oder mitnehmen.</p>
+    <div class="btns">
+      <a class="btn primary" href="tel:+43013471212">📞 Jetzt bestellen</a>
+      <a class="btn ghost" href="#standort">Jetzt vorbeischauen</a>
+    </div>
+    <div class="badges">
+      <span class="badge">🥡 Take-away</span><span class="badge">📅 Auch sonntags offen</span><span class="badge">🐶 Hunde erlaubt</span>
+    </div>
+  </div>
+  <div class="hero-art">
+    <div class="bowl">
+      <svg viewBox="0 0 120 120" aria-hidden="true"><g stroke="#fff" stroke-width="5" stroke-linecap="round" fill="none"><path d="M36 10v44M50 10v44M64 10v44M78 10v44"/><path d="M24 26h66"/></g><path d="M14 60h92a46 46 0 0 1-92 0z" fill="#ee5238"/></svg>
+    </div>
+    <div class="float"><b>Große Portionen</b>Fair im Preis, ideal für die Mittagspause.</div>
+  </div>
+</div></section>
+
+<section class="alt"><div class="wrap split">
+  <div class="photo" aria-hidden="true">🍜</div>
+  <div>
+    <h2>Mittagspause ohne Warten</h2>
+    <p>Du bestellst beim Reinkommen, und dein Essen ist schnell fertig. Auch wenn viel los ist, musst du meist nicht lange warten. Das Lokal ist größer, als es von außen aussieht, also findest du fast immer einen Platz.</p>
+    <p>Dazu gibt es vegetarische und vegane Optionen mit Tofu und pflanzlichen Alternativen.</p>
+    <a class="link" href="#kueche">Unsere Küche entdecken</a>
+  </div>
+</div></section>
+
+<section id="kueche"><div class="wrap">
+  <h2>Unsere Küche</h2>
+  <p class="sub">Asiatisch, warm und frisch aus dem Wok, dazu Sushi und Maki.</p>
+  <div class="cards">
+    <article class="card c1"><div class="img" aria-hidden="true">🍜</div><div class="body"><h3>Nudelgerichte</h3><p>Gebratene Nudeln mit Gemüse, Huhn oder Tofu. Große Portion, ordentlich Sauce.</p></div></article>
+    <article class="card c2"><div class="img" aria-hidden="true">🍚</div><div class="body"><h3>Reisgerichte</h3><p>Warm aus dem Wok, einfach, sättigend und fair im Preis.</p></div></article>
+    <article class="card c3"><div class="img" aria-hidden="true">🍣</div><div class="body"><h3>Sushi &amp; Maki</h3><p>Sushi-Variationen und Maki, zum Beispiel mit Avocado, für den kleinen Hunger.</p></div></article>
+    <article class="card c4"><div class="img" aria-hidden="true">🥦</div><div class="body"><h3>Vegetarisch &amp; vegan</h3><p>Tofu und pflanzliche Alternativen, auf Wunsch mit extra Gemüse.</p></div></article>
+  </div>
+  <p class="note">Aktuelle Speisekarte und Preise bekommst du vor Ort. <a href="tel:+43013471212">Oder ruf kurz an.</a></p>
+</div></section>
+
+<section id="gaeste" class="tint"><div class="wrap">
+  <h2>Was Gäste sagen</h2>
+  <div class="quotes">
+    <blockquote><p>„Die Mittagsmenü-Angebote sind hier einfach unschlagbar, eine Portion ist sehr groß und schmeckt hervorragend.“</p><footer>Patrick P.</footer></blockquote>
+    <blockquote><p>„Schnell, günstig und es schmeckt!“</p><footer>Amelie K.</footer></blockquote>
+    <blockquote><p>„Das Avocado Maki war wirklich sehr lecker und zudem günstig.“</p><footer>Gast auf Google</footer></blockquote>
+  </div>
+  <p class="src">Auszüge aus öffentlichen Bewertungen. Vor Veröffentlichung bitte Zitate mit dem Inhaber abstimmen.</p>
+</div></section>
+
+<section id="standort"><div class="wrap loc">
+  <div>
+    <h2>Standort &amp; Öffnungszeiten</h2>
+    <p class="addr">📍 <span>Wiedner Hauptstraße 3, 1040 Wien<br><span style="color:var(--muted);font-size:.95rem">Gleich gegenüber vom TU Wien Freihaus</span></span></p>
+    <div class="times">
+      <div class="t">🕐 Öffnungszeiten</div>
+      <div class="r"><span>Montag bis Freitag</span><span>11:00 bis 20:30</span></div>
+      <div class="r"><span>Samstag</span><span class="closed">geschlossen</span></div>
+      <div class="r"><span>Sonntag</span><span>11:00 bis 20:30</span></div>
+    </div>
+    <div class="btns"><a class="btn primary" href="tel:+43013471212">📞 01/347 12 12</a></div>
+  </div>
+  <div class="map">
+    <iframe title="Karte: Quick Yammy, Wiedner Hauptstraße 3, 1040 Wien" loading="lazy"
+      src="https://www.openstreetmap.org/export/embed.html?bbox=16.3600%2C48.1950%2C16.3760%2C48.2030&layer=mapnik&marker=48.1989839%2C16.3681796"></iframe>
+  </div>
+</div></section>
+
+<section id="kontakt" class="alt"><div class="wrap contact">
+  <h2>Hunger? Komm vorbei.</h2>
+  <p class="sub" style="margin:14px auto 0">Bestell telefonisch zum Abholen oder setz dich direkt ins Lokal.</p>
+  <div class="btns" style="margin-top:28px">
+    <a class="btn primary" href="tel:+43013471212">📞 Anrufen &amp; bestellen</a>
+    <a class="btn ghost" href="https://www.google.com/maps/place/48.1989839,16.3681796" target="_blank" rel="noreferrer">📍 Route in Google Maps</a>
+  </div>
+  <span class="cash">💶 Bitte Bargeld mitbringen, es ist nur Barzahlung möglich.</span>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div><span class="display">Quick Yammy</span><p>Wiedner Hauptstraße 3<br>1040 Wien<br><a href="tel:+43013471212">01/347 12 12</a></p></div>
+  <div><b>Öffnungszeiten</b><p>Mo bis Fr und So<br>11:00 bis 20:30<br>Samstag geschlossen</p></div>
+  <div><b>Rechtliches</b><p>[Impressum, Platzhalter]<br>[Datenschutz, Platzhalter]</p></div>
+</div></footer>
+</body>
+</html>
