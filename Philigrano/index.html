@@ -1,0 +1,666 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Philigrano · Mediterrane Küche in der Riemergasse, 1010 Wien</title>
+<meta name="description" content="Ristorante Philigrano in der Wiener Innenstadt: bewusst, natürlich, mediterran. Frische, regionale Zutaten, hausgemachte Pasta, Schanigarten. Montag bis Samstag ab 17 Uhr.">
+<meta name="theme-color" content="#2c3526">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Karla:wght@400;500;700&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f6f1e6; --paper-2:#ece4d3; --card:#fbf8f1;
+  --ink:#211f1a; --ink-soft:#575246;
+  --olive:#2c3526; --olive-2:#3d4a33; --olive-tint:#dfe3d2;
+  --terra:#a8472a; --terra-dark:#8c3a21; --gold:#c9a24b;
+  --line:#d8cfba;
+  --serif:"Cormorant Garamond","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:"Karla","Avenir Next","Helvetica Neue",Arial,sans-serif;
+  --radius:14px; --wrap:1120px;
+  --shadow:0 1px 2px rgba(33,31,26,.06),0 12px 32px -12px rgba(33,31,26,.22);
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.65 var(--sans);overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.005em}
+h2{font-size:clamp(2.1rem,5vw,3.3rem)}
+h3{font-size:1.5rem}
+p{margin:0 0 1em}
+.wrap{width:min(100% - 40px,var(--wrap));margin-inline:auto}
+section{padding:clamp(64px,9vw,120px) 0}
+.eyebrow{font:700 .78rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--terra);margin:0 0 18px;display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+.lead{font-size:1.14rem;color:var(--ink-soft);max-width:58ch}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:12px;top:-60px;background:var(--olive);color:#fff;padding:12px 18px;border-radius:8px;z-index:200;transition:top .2s}
+.skip:focus{top:12px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 26px;border-radius:999px;font:700 1rem/1 var(--sans);text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .18s var(--ease),background .18s,color .18s,border-color .18s;touch-action:manipulation}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--terra);color:#fff}
+.btn-primary:hover{background:var(--terra-dark)}
+.btn-ghost{border-color:currentColor;color:inherit;background:transparent}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-dark{background:var(--olive);color:#fff}
+.btn-dark:hover{background:var(--olive-2)}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* Draft note */
+.draft{background:var(--gold);color:#221c08;font-size:.88rem;text-align:center;padding:8px 44px 8px 16px;position:relative}
+.draft button{position:absolute;right:4px;top:50%;transform:translateY(-50%);width:40px;height:40px;border:0;background:none;font-size:1.3rem;cursor:pointer;color:inherit}
+
+/* Header */
+.head{position:sticky;top:0;z-index:100;background:rgba(246,241,230,.92);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid transparent;transition:border-color .2s}
+.head.scrolled{border-color:var(--line)}
+.head .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.logo{font:600 1.75rem/1 var(--serif);text-decoration:none;letter-spacing:.01em;display:flex;align-items:center;gap:10px}
+.logo svg{width:26px;height:26px;color:var(--olive-2)}
+.nav{display:flex;align-items:center;gap:6px}
+.nav a:not(.btn){text-decoration:none;font-weight:500;padding:12px 14px;border-radius:8px;position:relative}
+.nav a:not(.btn)::after{content:"";position:absolute;left:14px;right:14px;bottom:8px;height:1.5px;background:var(--terra);transform:scaleX(0);transform-origin:left;transition:transform .25s var(--ease)}
+.nav a:not(.btn):hover::after,.nav a[aria-current]::after{transform:scaleX(1)}
+.nav .btn{min-height:44px;padding:0 20px;margin-left:10px}
+.burger{display:none;width:48px;height:48px;border:0;background:none;cursor:pointer;border-radius:10px;color:var(--ink)}
+.burger svg{width:26px;height:26px;margin:auto}
+@media (max-width:860px){
+  .burger{display:block}
+  .nav{position:fixed;inset:72px 0 auto 0;background:var(--paper);flex-direction:column;align-items:stretch;padding:12px 20px 24px;gap:0;border-bottom:1px solid var(--line);box-shadow:var(--shadow);transform:translateY(-12px);opacity:0;visibility:hidden;transition:transform .25s var(--ease),opacity .2s,visibility .2s}
+  .nav.open{transform:none;opacity:1;visibility:visible}
+  .nav a:not(.btn){padding:16px 4px;border-bottom:1px solid var(--line);font-size:1.1rem}
+  .nav a:not(.btn)::after{display:none}
+  .nav .btn{margin:18px 0 0;min-height:52px}
+}
+
+/* Hero */
+.hero{background:var(--olive);color:#f4efe2;padding:0;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 500px at 85% 10%,rgba(201,162,75,.20),transparent 60%),radial-gradient(700px 500px at 0% 100%,rgba(168,71,42,.28),transparent 60%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;min-height:min(86dvh,760px);padding-block:72px}
+.hero .eyebrow{color:var(--gold)}
+.hero h1{font-size:clamp(3rem,9vw,6.2rem);line-height:.95}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--gold)}
+.hero p.lead{color:#d9d4c3;margin:26px 0 34px;font-size:1.2rem}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.facts{display:flex;flex-wrap:wrap;gap:10px 28px;margin:44px 0 0;padding:22px 0 0;border-top:1px solid rgba(244,239,226,.2);list-style:none;font-size:.96rem;color:#d9d4c3}
+.facts li{display:flex;align-items:center;gap:9px}
+.facts svg{width:18px;height:18px;color:var(--gold);flex:none}
+.plate{position:relative;aspect-ratio:1;max-width:460px;margin-inline:auto;width:100%}
+.plate svg{width:100%;height:100%}
+.spin{transform-origin:50% 50%;animation:spin 80s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr;min-height:0;padding-block:56px 64px}
+  .plate{max-width:260px;margin-top:8px}
+}
+
+/* Philosophy */
+.phil .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,88px);align-items:start}
+.quote{font:italic 500 clamp(1.6rem,3.4vw,2.3rem)/1.25 var(--serif);color:var(--olive);margin:0;padding-left:22px;border-left:2px solid var(--terra)}
+.quote cite{display:block;font:500 .9rem/1.4 var(--sans);font-style:normal;color:var(--ink-soft);margin-top:16px}
+.pillars{display:grid;gap:14px;margin-top:30px;padding:0;list-style:none}
+.pillars li{display:grid;grid-template-columns:52px 1fr;gap:18px;align-items:start;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.pillars .ic{width:52px;height:52px;border-radius:50%;background:var(--olive-tint);display:grid;place-items:center;color:var(--olive)}
+.pillars .ic svg{width:24px;height:24px}
+.pillars h3{margin-bottom:4px}
+.pillars p{margin:0;color:var(--ink-soft)}
+@media (max-width:860px){.phil .grid{grid-template-columns:1fr}}
+
+/* Menu */
+.menu{background:var(--paper-2)}
+.menu-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px;margin-bottom:34px}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:4px;margin:0 -4px 30px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;min-height:46px;padding:0 20px;border-radius:999px;border:1.5px solid var(--line);background:transparent;font:500 1rem var(--sans);color:var(--ink);cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.tab:hover{border-color:var(--olive)}
+.tab[aria-selected="true"]{background:var(--olive);border-color:var(--olive);color:#fff}
+.panel{display:grid;grid-template-columns:1fr 1fr;gap:0 56px}
+.panel[hidden]{display:none}
+.dish{padding:20px 0;border-bottom:1px solid var(--line);animation:rise .45s var(--ease) both}
+.dish:nth-child(2){animation-delay:.04s}.dish:nth-child(3){animation-delay:.08s}.dish:nth-child(4){animation-delay:.12s}.dish:nth-child(5){animation-delay:.16s}.dish:nth-child(6){animation-delay:.2s}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}}
+.dish h3{font-size:1.42rem;display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 10px}
+.dish p{margin:6px 0 0;color:var(--ink-soft);font-size:.98rem}
+.tag{font:700 .68rem/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;padding:5px 8px;border-radius:4px;background:var(--olive-tint);color:var(--olive)}
+.tag.sig{background:#f1dcd2;color:var(--terra-dark)}
+.menu-note{margin-top:30px;font-size:.92rem;color:var(--ink-soft)}
+@media (max-width:760px){.panel{grid-template-columns:1fr}}
+
+/* Ambiente */
+.amb .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.card{border-radius:var(--radius);overflow:hidden;background:var(--card);border:1px solid var(--line);transition:transform .3s var(--ease),box-shadow .3s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.card .art{aspect-ratio:4/3;display:grid;place-items:center;position:relative}
+.card .art svg{width:44%;height:auto;color:rgba(255,255,255,.92)}
+.art-1{background:linear-gradient(140deg,#4b5a3c,#2c3526)}
+.art-2{background:linear-gradient(140deg,#b85a39,#7c311b)}
+.art-3{background:linear-gradient(140deg,#c9a24b,#8e6c22)}
+.card .art span{position:absolute;left:12px;bottom:10px;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.8)}
+.card .txt{padding:22px}
+.card p{margin:6px 0 0;color:var(--ink-soft)}
+@media (max-width:860px){.amb .cards{grid-template-columns:1fr}}
+
+/* Reservation */
+.res{background:var(--olive);color:#f4efe2}
+.res .grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,6vw,80px);align-items:start}
+.res .eyebrow{color:var(--gold)}
+.res .lead{color:#d9d4c3}
+.res .tel{font:600 clamp(1.9rem,4vw,2.6rem)/1.1 var(--serif);text-decoration:none;display:inline-block;margin:10px 0 6px;border-bottom:1.5px solid var(--gold);padding-bottom:4px}
+form{background:var(--card);color:var(--ink);border-radius:20px;padding:clamp(22px,4vw,36px);box-shadow:var(--shadow)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{margin-bottom:16px}
+label{display:block;font-weight:700;font-size:.9rem;margin-bottom:6px}
+label small{font-weight:400;color:var(--ink-soft)}
+input,select,textarea{width:100%;min-height:50px;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;background:#fff;font:400 1rem var(--sans);color:var(--ink);transition:border-color .2s,box-shadow .2s}
+textarea{min-height:92px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--olive);box-shadow:0 0 0 3px rgba(61,74,51,.2)}
+.field.bad input,.field.bad select{border-color:#b3261e}
+.err{color:#b3261e;font-size:.86rem;margin-top:5px;display:none}
+.field.bad .err{display:block}
+.hint{font-size:.86rem;color:var(--ink-soft);margin:14px 0 0}
+form .btn{width:100%;margin-top:6px}
+.ok{display:none;background:var(--olive-tint);color:var(--olive);border-radius:10px;padding:14px 16px;margin-top:16px;font-weight:500}
+.ok.show{display:block}
+@media (max-width:860px){.res .grid{grid-template-columns:1fr}}
+@media (max-width:480px){.row{grid-template-columns:1fr;gap:0}}
+
+/* Contact */
+.contact .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px)}
+.hours{width:100%;border-collapse:collapse;margin-top:18px;font-variant-numeric:tabular-nums}
+.hours td{padding:13px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right}
+.hours tr.today td{font-weight:700;color:var(--terra-dark)}
+.hours tr.today td:first-child::after{content:"Heute";font:700 .66rem/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;background:var(--terra);color:#fff;padding:4px 7px;border-radius:4px;margin-left:10px;vertical-align:2px}
+.status{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.92rem;padding:8px 14px;border-radius:999px;background:var(--olive-tint);color:var(--olive);margin-top:8px}
+.status::before{content:"";width:9px;height:9px;border-radius:50%;background:currentColor}
+.status.closed{background:#efe3d7;color:#7a5a3a}
+.addr{font-style:normal;margin:18px 0 22px;font-size:1.08rem}
+.addr a{text-underline-offset:3px}
+.map{border-radius:var(--radius);background:var(--olive-tint);border:1px solid var(--line);aspect-ratio:16/10;position:relative;overflow:hidden;margin-bottom:22px}
+.map svg{width:100%;height:100%}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;padding:0;list-style:none}
+.chips li{font-size:.88rem;padding:7px 13px;border:1px solid var(--line);border-radius:999px;background:var(--card)}
+@media (max-width:860px){.contact .grid{grid-template-columns:1fr}}
+
+/* Footer */
+footer{background:#1b2117;color:#bdb8a8;padding:48px 0 110px;font-size:.94rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px}
+footer .logo{color:#f4efe2}
+footer .logo svg{color:var(--gold)}
+footer a{text-underline-offset:3px}
+footer p{margin:6px 0 0}
+
+/* Mobile action bar */
+.bar{display:none}
+@media (max-width:860px){
+  .bar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:90;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(246,241,230,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+  .bar .btn{min-height:50px;padding:0 12px}
+  .bar .btn-ghost{border-color:var(--olive);color:var(--olive)}
+}
+
+/* ---------- v2: Leben und Persönlichkeit ---------- */
+.progress{position:fixed;left:0;top:0;height:3px;width:100%;background:var(--terra);transform:scaleX(0);transform-origin:left;z-index:150}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:140;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hand{font-family:"Caveat","Segoe Script","Bradley Hand",cursive}
+.greet{font-size:1.75rem;line-height:1;color:var(--gold);margin:0 0 14px;transform:rotate(-2deg);transform-origin:left;display:inline-block}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.08em}
+.hero h1 .ln>span{display:block;animation:up .9s var(--ease) both}
+.hero h1 .ln:nth-child(2)>span{animation-delay:.1s}
+.hero h1 .ln:nth-child(3)>span{animation-delay:.2s}
+@keyframes up{from{transform:translateY(105%)}}
+.hero .eyebrow,.hero .greet,.hero p.lead,.hero .cta,.hero .facts{animation:fadeup .8s var(--ease) both}
+.hero p.lead{animation-delay:.35s}.hero .cta{animation-delay:.45s}.hero .facts{animation-delay:.55s}
+@keyframes fadeup{from{opacity:0;transform:translateY(14px)}}
+.plate{animation:plate-in 1.1s var(--ease) .15s both}
+@keyframes plate-in{from{opacity:0;transform:scale(.86) rotate(-14deg)}}
+.plate .tilt{transition:transform .5s var(--ease);will-change:transform;height:100%}
+.plate .float{animation:float 7s ease-in-out infinite;height:100%}
+@keyframes float{50%{transform:translateY(-10px)}}
+.steam path{stroke:#f4efe2;stroke-width:5;stroke-linecap:round;fill:none;opacity:0;animation:steam 4.5s ease-in-out infinite}
+.steam path:nth-child(2){animation-delay:1.4s}.steam path:nth-child(3){animation-delay:2.8s}
+@keyframes steam{0%{opacity:0;transform:translateY(12px)}35%{opacity:.5}100%{opacity:0;transform:translateY(-34px)}}
+.live{display:inline-flex;align-items:center;gap:9px;font-weight:700;color:#f4efe2}
+.live i{width:9px;height:9px;border-radius:50%;background:#8fd08a;box-shadow:0 0 0 0 rgba(143,208,138,.7);animation:pulse 2s infinite}
+.live.off i{background:var(--gold);animation:none}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(143,208,138,0)}100%{box-shadow:0 0 0 0 rgba(143,208,138,0)}}
+
+/* Laufband */
+.band{background:var(--terra);color:#fff3ea;padding:16px 0;overflow:hidden;border-block:1px solid rgba(0,0,0,.12)}
+.band .track{display:flex;gap:44px;width:max-content;animation:run 36s linear infinite;font:italic 500 1.5rem/1 var(--serif);white-space:nowrap}
+.band:hover .track{animation-play-state:paused}
+.band span::after{content:"✦";font-style:normal;font-size:.8rem;margin-left:44px;opacity:.7;vertical-align:3px}
+@keyframes run{to{transform:translateX(-50%)}}
+
+/* Zahlen */
+.nums{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:38px;padding-top:30px;border-top:1px solid var(--line)}
+.nums b{display:block;font:600 clamp(2.2rem,5vw,3.1rem)/1 var(--serif);color:var(--terra)}
+.nums span{font-size:.9rem;color:var(--ink-soft)}
+.pillars li{transition:transform .3s var(--ease),border-color .3s,box-shadow .3s}
+.pillars li:hover{transform:translateX(6px);border-color:var(--olive-2);box-shadow:var(--shadow)}
+.pillars li:hover .ic{background:var(--olive);color:#fff}
+.pillars .ic{transition:background .3s,color .3s}
+
+/* Brief aus der Küche */
+.note{padding-top:0}
+.letter{max-width:760px;margin-inline:auto;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:clamp(28px,6vw,60px);position:relative;transform:rotate(-.6deg);box-shadow:var(--shadow)}
+.letter::before{content:"";position:absolute;left:50%;top:-14px;width:120px;height:28px;background:rgba(201,162,75,.45);transform:translateX(-50%) rotate(2deg)}
+.letter h2{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:18px}
+.letter p{font-size:1.1rem}
+.letter .sign{font-size:2.3rem;line-height:1;color:var(--terra-dark);margin:26px 0 0;transform:rotate(-3deg);display:inline-block}
+.sign small{display:block;font:500 .82rem var(--sans);color:var(--ink-soft);transform:rotate(3deg);margin-top:8px}
+
+/* Empfehlung des Abends */
+.tip{display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center;background:var(--olive);color:#f4efe2;border-radius:18px;padding:22px 26px;margin-bottom:34px;position:relative;overflow:hidden}
+.tip::after{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(201,162,75,.35),transparent 70%)}
+.tip .stamp{width:84px;height:84px;border-radius:50%;border:1.5px dashed var(--gold);display:grid;place-items:center;text-align:center;font-size:1.3rem;line-height:.95;color:var(--gold);transform:rotate(-10deg);flex:none}
+.tip h3{font-size:1.7rem}
+.tip p{margin:4px 0 0;color:#d9d4c3}
+.tip .btn{position:relative;z-index:1}
+@media (max-width:700px){.tip{grid-template-columns:auto 1fr}.tip .btn{grid-column:1/-1}}
+.dish{position:relative;transition:padding-left .3s var(--ease)}
+.dish::before{content:"";position:absolute;left:0;top:50%;width:0;height:1.5px;background:var(--terra);transition:width .3s var(--ease)}
+.dish:hover{padding-left:28px}
+.dish:hover::before{width:18px}
+.dish:hover h3{color:var(--terra-dark)}
+.dish h3{transition:color .2s}
+.card .art svg{transition:transform .5s var(--ease)}
+.card:hover .art svg{transform:scale(1.12) rotate(-4deg)}
+.nav a.active::after{transform:scaleX(1)}
+.btn-primary{position:relative;overflow:hidden}
+.btn-primary::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.25) 50%,transparent 70%);transform:translateX(-120%);transition:transform .7s var(--ease)}
+.btn-primary:hover::after{transform:translateX(120%)}
+.to-top{position:fixed;right:18px;bottom:22px;width:48px;height:48px;border-radius:50%;border:0;background:var(--olive);color:#fff;cursor:pointer;z-index:80;box-shadow:var(--shadow);opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .3s,transform .3s var(--ease)}
+.to-top.show{opacity:1;transform:none;pointer-events:auto}
+.to-top svg{width:20px;height:20px;margin:auto}
+@media (max-width:860px){.to-top{bottom:86px}}
+@media (prefers-reduced-motion:reduce){.band .track{animation:none}.steam{display:none}}
+
+/* Reveal */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<div class="draft" id="draft" role="note">
+  Entwurf zur Ansicht. Gerichte, Texte und Fotos sind Platzhalter und werden mit den echten Daten ersetzt.
+  <button type="button" aria-label="Hinweis schließen" onclick="document.getElementById('draft').remove()">×</button>
+</div>
+
+<header class="head" id="head">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Philigrano, zur Startseite">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 20C8 14 13 9 20 4"/><path d="M9.5 14.5c-2.6.4-4.3-.6-5-2.7 2.300-.7 4.200.200 5 2.700z"/><path d="M13 11c-2.400-.300-3.700-1.600-3.900-3.800 2.300-.100 3.700 1.200 3.900 3.800z"/><path d="M12.500 15.500c.200 2.500 1.600 3.900 4 4.100.100-2.400-1.300-3.800-4-4.100z"/><path d="M16.500 11.500c.500 2.300 2 3.400 4.300 3.300-.200-2.300-1.700-3.400-4.300-3.300z"/></svg>
+      Philigrano
+    </a>
+    <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="nav" id="nav" aria-label="Hauptnavigation">
+      <a href="#philosophie">Philosophie</a>
+      <a href="#karte">Speisekarte</a>
+      <a href="#ambiente">Ambiente</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="btn btn-primary" href="#reservieren">Tisch reservieren</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top" aria-labelledby="h1">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Ristorante · Riemergasse 12 · Wien 1</p>
+      <p class="greet hand" id="greet">Schön, dass Sie da sind.</p>
+      <h1 id="h1"><span class="ln"><span>Bewusst.</span></span><span class="ln"><span>Natürlich.</span></span><span class="ln"><span><em>Mediterran.</em></span></span></h1>
+      <p class="lead">Wir achten bewusst darauf, was wir einkaufen und woher es kommt. Frisch, regional und mit viel Liebe gekocht, mitten in der Wiener Innenstadt.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#reservieren">Tisch reservieren</a>
+        <a class="btn btn-ghost" href="#karte">Zur Speisekarte</a>
+      </div>
+      <ul class="facts">
+        <li class="live" id="live"><i aria-hidden="true"></i><span>Mo bis Sa ab 17 Uhr</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo bis Sa, 17 bis 24 Uhr</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M6 3v7a3 3 0 0 0 6 0V3M9 3v18M17 3c-2 2-2.500 5-2.500 8H17v10"/></svg>Warme Küche bis 23 Uhr</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M12 3v18M5 21h14M12 5c4 0 7 2 8 6H4c1-4 4-6 8-6z"/></svg>Schanigarten</li>
+      </ul>
+    </div>
+    <div class="plate" aria-hidden="true"><div class="tilt" id="tilt"><div class="float">
+      <svg viewBox="0 0 400 400" fill="none" style="overflow:visible">
+        <circle cx="200" cy="200" r="190" fill="#f4efe2"/>
+        <circle cx="200" cy="200" r="150" fill="#fbf8f1" stroke="#d8cfba" stroke-width="1.5"/>
+        <g class="spin">
+          <path id="ring" d="M200 200m-170 0a170 170 0 1 1 340 0a170 170 0 1 1-340 0" fill="none"/>
+          <text font-family="Karla,Arial,sans-serif" font-size="13" font-weight="700" fill="#3d4a33"><textPath href="#ring" textLength="1056" lengthAdjust="spacing">BEWUSST · NATÜRLICH · MEDITERRAN · SEIT 2016 · BEWUSST · NATÜRLICH · MEDITERRAN · SEIT 2016 · </textPath></text>
+        </g>
+        <g stroke="#c9a24b" stroke-width="7" stroke-linecap="round">
+          <path d="M132 214c10-52 62-70 98-48 38 24 34 78-8 92-40 14-74-12-64-46 8-28 42-36 58-16 14 18 2 40-16 40"/>
+          <path d="M150 232c-8-44 30-78 72-66 44 12 54 62 22 86" opacity=".7"/>
+          <path d="M168 176c30-22 78-8 88 28 8 32-18 62-52 60" opacity=".5"/>
+        </g>
+        <g fill="#3d4a33"><ellipse cx="238" cy="170" rx="13" ry="6" transform="rotate(-30 238 170)"/><ellipse cx="174" cy="246" rx="12" ry="5.500" transform="rotate(25 174 246)"/><ellipse cx="216" cy="214" rx="11" ry="5" transform="rotate(70 216 214)"/></g>
+        <g fill="#a8472a"><circle cx="258" cy="226" r="11"/><circle cx="160" cy="190" r="9"/><circle cx="206" cy="150" r="7"/></g>
+        <g class="steam"><path d="M170 96c-10-14 10-22 0-38"/><path d="M200 86c-10-14 10-22 0-38"/><path d="M230 96c-10-14 10-22 0-38"/></g>
+      </svg>
+    </div></div></div>
+  </div>
+</section>
+
+<div class="band" aria-hidden="true"><div class="track"><span>Hausgemachte Pasta</span><span>Olivenöl</span><span>Frischer Fisch</span><span>Basilikum</span><span>Risotto Nero</span><span>Schanigarten</span><span>Bellini Prosecco</span><span>Saisonale Küche</span><span>Hausgemachte Pasta</span><span>Olivenöl</span><span>Frischer Fisch</span><span>Basilikum</span><span>Risotto Nero</span><span>Schanigarten</span><span>Bellini Prosecco</span><span>Saisonale Küche</span></div></div>
+
+<section class="phil" id="philosophie" aria-labelledby="h-phil">
+  <div class="wrap grid">
+    <div class="rv">
+      <p class="eyebrow">Philosophie</p>
+      <h2 id="h-phil">Gute Küche beginnt beim Einkauf.</h2>
+      <blockquote class="quote" style="margin-top:34px">
+        Die Natur und unsere Umwelt liegen uns sehr am Herzen.
+        <cite>Philigrano, seit 2016 in der Riemergasse</cite>
+      </blockquote>
+      <div class="nums">
+        <div><b data-count="2016">2016</b><span>eröffnet</span></div>
+        <div><b data-count="6">6</b><span>Abende pro Woche</span></div>
+        <div><b data-count="23" data-suffix=" Uhr">23 Uhr</b><span>warme Küche bis</span></div>
+      </div>
+    </div>
+    <div class="rv">
+      <p class="lead">Herzlich willkommen im Philigrano. Bei uns kommt auf den Teller, was gerade Saison hat und was wir guten Gewissens einkaufen können. Daraus entsteht eine mediterrane Küche, die leicht ist und trotzdem satt macht.</p>
+      <ul class="pillars">
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M12 21s-7-5.500-7-11a7 7 0 0 1 14 0c0 5.500-7 11-7 11z"/><circle cx="12" cy="10" r="2.500"/></svg></span>
+          <div><h3>Regional</h3><p>Zutaten von Betrieben aus der Umgebung, so oft es geht.</p></div></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></span>
+          <div><h3>Saisonal</h3><p>Die Karte wechselt mit dem, was der Markt hergibt.</p></div></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 12c0-4 3.500-7 8-7s8 3 8 7M3 12h18M6 12c0 4 2.500 7 6 7s6-3 6-7"/></svg></span>
+          <div><h3>Hausgemacht</h3><p>Pasta, Saucen und Desserts entstehen in unserer Küche.</p></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="note" aria-labelledby="h-note">
+  <div class="wrap">
+    <div class="letter rv">
+      <p class="eyebrow">Ein Wort aus der Küche</p>
+      <h2 id="h-note">Wir kochen so, wie wir selbst gern essen.</h2>
+      <p>Ohne Eile, mit guten Zutaten und mit Respekt vor dem, was die Jahreszeit gerade hergibt. Manche Gerichte bleiben, weil unsere Gäste sie nicht mehr hergeben. Andere wechseln, sobald der Markt etwas Neues bringt.</p>
+      <p>Fragen Sie uns ruhig, was heute besonders gut ist. Wir erzählen es gern.</p>
+      <p class="sign hand">Ihr Philigrano-Team<small>Riemergasse 12, Wien</small></p>
+    </div>
+  </div>
+</section>
+
+<section class="menu" id="karte" aria-labelledby="h-karte">
+  <div class="wrap">
+    <div class="menu-head rv">
+      <div>
+        <p class="eyebrow">Speisekarte</p>
+        <h2 id="h-karte">Aus unserer Küche</h2>
+      </div>
+      <p class="lead" style="margin:0;max-width:40ch">Ein Auszug. Tagesempfehlungen und die Weinkarte bringen wir Ihnen gern an den Tisch.</p>
+    </div>
+
+    <div class="tip rv" id="tip">
+      <div class="stamp hand" aria-hidden="true">Tipp des<br>Abends</div>
+      <div><h3 id="tipName">Risotto Nero</h3><p id="tipText">Mit gebratenem Oktopus. Unser Klassiker.</p></div>
+      <a class="btn btn-primary" href="#reservieren">Tisch dazu sichern</a>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Kategorien der Speisekarte">
+      <button class="tab" role="tab" id="t1" aria-controls="p1" aria-selected="true">Antipasti</button>
+      <button class="tab" role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1">Pasta &amp; Risotto</button>
+      <button class="tab" role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1">Hauptgerichte</button>
+      <button class="tab" role="tab" id="t4" aria-controls="p4" aria-selected="false" tabindex="-1">Dolci</button>
+    </div>
+
+    <div class="panel" role="tabpanel" id="p1" aria-labelledby="t1" tabindex="0">
+      <article class="dish"><h3>Burrata</h3><p>Ochsenherztomaten, Basilikumöl, geröstetes Sauerteigbrot</p></article>
+      <article class="dish"><h3>Vitello Tonnato</h3><p>Rosa gebratenes Kalb, Thunfischcreme, Kapernäpfel</p></article>
+      <article class="dish"><h3>Gegrilltes Gemüse <span class="tag">vegan</span></h3><p>Zucchini, Melanzani, Paprika, Olivenöl, Meersalz</p></article>
+      <article class="dish"><h3>Carpaccio vom Rind</h3><p>Rucola, gehobelter Parmesan, Zitrone</p></article>
+    </div>
+    <div class="panel" role="tabpanel" id="p2" aria-labelledby="t2" tabindex="0" hidden>
+      <article class="dish"><h3>Tagliatelle hausgemacht <span class="tag sig">Klassiker</span></h3><p>Täglich frisch, mit wechselnden Saucen der Saison</p></article>
+      <article class="dish"><h3>Risotto Nero <span class="tag sig">Klassiker</span></h3><p>Mit gebratenem Oktopus</p></article>
+      <article class="dish"><h3>Ravioli <span class="tag">vegetarisch</span></h3><p>Ricotta und Spinat, Salbeibutter, Parmesan</p></article>
+      <article class="dish"><h3>Spaghetti alle Vongole</h3><p>Venusmuscheln, Knoblauch, Weißwein, Petersilie</p></article>
+    </div>
+    <div class="panel" role="tabpanel" id="p3" aria-labelledby="t3" tabindex="0" hidden>
+      <article class="dish"><h3>Branzino</h3><p>Wolfsbarsch im Ganzen gebraten, Fenchel, Zitrone</p></article>
+      <article class="dish"><h3>Tagliata vom Rind</h3><p>Rucola, Kirschtomaten, Rosmarinkartoffeln</p></article>
+      <article class="dish"><h3>Saltimbocca</h3><p>Kalb, Salbei, Prosciutto, Weißweinsauce</p></article>
+      <article class="dish"><h3>Melanzane alla Parmigiana <span class="tag">vegetarisch</span></h3><p>Geschichtete Melanzani, Tomate, Mozzarella</p></article>
+    </div>
+    <div class="panel" role="tabpanel" id="p4" aria-labelledby="t4" tabindex="0" hidden>
+      <article class="dish"><h3>Tiramisù</h3><p>Nach Art des Hauses</p></article>
+      <article class="dish"><h3>Panna Cotta</h3><p>Mit Beeren der Saison</p></article>
+      <article class="dish"><h3>Affogato</h3><p>Vanilleeis, heißer Espresso</p></article>
+      <article class="dish"><h3>Bellini Prosecco</h3><p>Unser Aperitif-Tipp zum Ausklang oder zum Start</p></article>
+    </div>
+    <p class="menu-note">Informationen zu Allergenen erhalten Sie bei unserem Service. Preise laut aktueller Karte im Lokal.</p>
+  </div>
+</section>
+
+<section class="amb" id="ambiente" aria-labelledby="h-amb">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">Ambiente</p>
+      <h2 id="h-amb">Ein Abend, drei Plätze.</h2>
+      <p class="lead" style="margin-top:18px">Wenige Schritte vom Stephansplatz, und doch in einer ruhigen Gasse.</p>
+    </div>
+    <div class="cards">
+      <article class="card rv"><div class="art art-1"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M32 8v48M12 56h40M32 12c12 0 20 6 22 16H10c2-10 10-16 22-16z"/></svg><span>Foto folgt</span></div>
+        <div class="txt"><h3>Schanigarten</h3><p>Im Sommer sitzen Sie draußen in der Riemergasse.</p></div></article>
+      <article class="card rv"><div class="art art-2"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M16 10h32l-4 18a12 12 0 0 1-24 0zM32 40v14M22 54h20M20 20h24"/></svg><span>Foto folgt</span></div>
+        <div class="txt"><h3>Bar</h3><p>Aperitivo vor dem Essen oder ein Glas Wein danach.</p></div></article>
+      <article class="card rv"><div class="art art-3"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M8 28h48M14 28v24M50 28v24M22 28V16M42 28V16M18 16h28"/></svg><span>Foto folgt</span></div>
+        <div class="txt"><h3>Gastraum</h3><p>Gemütlich für zwei, mit Platz für Runden. Hunde sind willkommen.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="res" id="reservieren" aria-labelledby="h-res">
+  <div class="wrap grid">
+    <div class="rv">
+      <p class="eyebrow">Reservierung</p>
+      <h2 id="h-res">Ihr Tisch wartet.</h2>
+      <p class="lead" style="margin-top:18px">Am schnellsten geht es telefonisch. Oder Sie schicken uns Ihre Anfrage, wir bestätigen per E-Mail.</p>
+      <a class="tel" href="tel:+4318904958">01 890 49 58</a>
+      <p style="color:#d9d4c3;margin:0">Montag bis Samstag ab 17 Uhr</p>
+    </div>
+    <form id="form" class="rv" novalidate>
+      <div class="row">
+        <div class="field"><label for="date">Datum</label><input id="date" name="date" type="date" required><p class="err" id="e-date">Bitte ein Datum von Montag bis Samstag wählen.</p></div>
+        <div class="field"><label for="time">Uhrzeit</label>
+          <select id="time" name="time" required>
+            <option>17:00</option><option>17:30</option><option>18:00</option><option>18:30</option><option selected>19:00</option><option>19:30</option><option>20:00</option><option>20:30</option><option>21:00</option><option>21:30</option><option>22:00</option>
+          </select></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="guests">Personen</label>
+          <select id="guests" name="guests"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>Mehr als 8</option></select></div>
+        <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required><p class="err" id="e-name">Bitte Ihren Namen angeben.</p></div>
+      </div>
+      <div class="field"><label for="phone">Telefon</label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required><p class="err" id="e-phone">Bitte eine Telefonnummer für Rückfragen angeben.</p></div>
+      <div class="field"><label for="msg">Wünsche <small>(optional)</small></label><textarea id="msg" name="msg" placeholder="z. B. Schanigarten, Allergien, Anlass"></textarea></div>
+      <button class="btn btn-primary" type="submit">Anfrage senden</button>
+      <p class="hint">Die Anfrage öffnet Ihr E-Mail-Programm. Der Tisch ist erst mit unserer Bestätigung reserviert.</p>
+      <p class="ok" id="ok" role="status" aria-live="polite">Danke. Ihre Anfrage wurde in Ihrem E-Mail-Programm vorbereitet, bitte dort noch absenden.</p>
+    </form>
+  </div>
+</section>
+
+<section class="contact" id="kontakt" aria-labelledby="h-kon">
+  <div class="wrap grid">
+    <div class="rv">
+      <p class="eyebrow">Öffnungszeiten</p>
+      <h2 id="h-kon">Wann wir da sind</h2>
+      <p><span class="status" id="status">Mo bis Sa ab 17 Uhr</span></p>
+      <table class="hours">
+        <caption class="skip" style="position:absolute">Öffnungszeiten nach Wochentag</caption>
+        <tbody>
+          <tr data-d="1"><td>Montag</td><td>17:00 – 24:00</td></tr>
+          <tr data-d="2"><td>Dienstag</td><td>17:00 – 24:00</td></tr>
+          <tr data-d="3"><td>Mittwoch</td><td>17:00 – 24:00</td></tr>
+          <tr data-d="4"><td>Donnerstag</td><td>17:00 – 24:00</td></tr>
+          <tr data-d="5"><td>Freitag</td><td>17:00 – 24:00</td></tr>
+          <tr data-d="6"><td>Samstag</td><td>17:00 – 24:00</td></tr>
+          <tr data-d="0"><td>Sonntag und Feiertag</td><td>geschlossen</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:14px;color:var(--ink-soft)">Warme Küche bis 23 Uhr.</p>
+    </div>
+    <div class="rv">
+      <p class="eyebrow">Anfahrt</p>
+      <div class="map" role="img" aria-label="Lageskizze: Philigrano in der Riemergasse, zwischen Wollzeile und Stubentor">
+        <svg viewBox="0 0 480 300" fill="none">
+          <rect width="480" height="300" fill="#dfe3d2"/>
+          <g stroke="#fbf8f1" stroke-linecap="round"><path d="M-10 90L490 60" stroke-width="22"/><path d="M-10 230L490 250" stroke-width="16"/><path d="M250 -10L270 310" stroke-width="18"/><path d="M110 -10L90 310" stroke-width="12"/><path d="M400 -10L410 310" stroke-width="12"/></g>
+          <g font-family="Karla,Arial,sans-serif" font-size="12" fill="#575246" font-weight="500"><text x="20" y="80">Wollzeile</text><text x="276" y="150" transform="rotate(87 276 150)">Riemergasse</text><text x="330" y="244">Stubentor U3</text><text x="20" y="222">Singerstraße</text></g>
+          <g transform="translate(262 170)"><circle r="26" fill="#a8472a" opacity=".18"/><path d="M0 -26c-10 0-17 7-17 16 0 12 17 26 17 26s17-14 17-26c0-9-7-16-17-16z" fill="#a8472a"/><circle cy="-10" r="6" fill="#fbf8f1"/></g>
+        </svg>
+      </div>
+      <address class="addr">
+        <strong>Ristorante Philigrano</strong><br>
+        Riemergasse 12, 1010 Wien<br>
+        <a href="tel:+4318904958">+43 1 890 49 58</a><br>
+        <a href="mailto:office@philigrano.at">office@philigrano.at</a>
+      </address>
+      <a class="btn btn-dark" href="https://www.google.com/maps/dir/?api=1&destination=Riemergasse+12,+1010+Wien" target="_blank" rel="noopener">Route planen</a>
+      <ul class="chips" aria-label="Gut zu wissen">
+        <li>U3 Stubentor in der Nähe</li><li>Kartenzahlung</li><li>Vegetarische Gerichte</li><li>Hunde erlaubt</li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="logo" href="#top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 20C8 14 13 9 20 4"/><path d="M9.5 14.5c-2.6.4-4.3-.6-5-2.7 2.300-.7 4.200.200 5 2.700z"/><path d="M13 11c-2.400-.300-3.700-1.600-3.900-3.800 2.300-.100 3.700 1.200 3.900 3.800z"/></svg>Philigrano</a>
+      <p>Bewusst, natürlich, mediterran.</p>
+    </div>
+    <div>
+      <p>Riemergasse 12, 1010 Wien · FN 461573 i</p>
+      <p><a href="#">Impressum</a> · <a href="#">Datenschutz</a></p>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="Nach oben"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+
+<div class="bar" aria-label="Schnellzugriff">
+  <a class="btn btn-ghost" href="tel:+4318904958">Anrufen</a>
+  <a class="btn btn-primary" href="#reservieren">Reservieren</a>
+</div>
+
+<script>
+(function(){
+  var head=document.getElementById('head'),nav=document.getElementById('nav'),burger=document.getElementById('burger');
+  addEventListener('scroll',function(){head.classList.toggle('scrolled',scrollY>8)},{passive:true});
+  function setNav(open){nav.classList.toggle('open',open);burger.setAttribute('aria-expanded',open);burger.setAttribute('aria-label',open?'Menü schließen':'Menü öffnen')}
+  burger.addEventListener('click',function(){setNav(!nav.classList.contains('open'))});
+  nav.addEventListener('click',function(e){if(e.target.closest('a'))setNav(false)});
+  addEventListener('keydown',function(e){if(e.key==='Escape')setNav(false)});
+
+  // Tabs
+  var tabs=[].slice.call(document.querySelectorAll('[role=tab]'));
+  function pick(t,focus){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).hidden=!on});if(focus)t.focus()}
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){pick(t)});
+    t.addEventListener('keydown',function(e){var d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(d){e.preventDefault();pick(tabs[(i+d+tabs.length)%tabs.length],true)}});
+  });
+
+  // Reveal
+  var rv=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});rv.forEach(function(el){io.observe(el)})}
+  else rv.forEach(function(el){el.classList.add('in')});
+
+  // Hours
+  var now=new Date(),d=now.getDay(),h=now.getHours();
+  var row=document.querySelector('.hours tr[data-d="'+d+'"]');if(row)row.classList.add('today');
+  var st=document.getElementById('status');
+  if(d!==0&&h>=17){st.textContent='Jetzt geöffnet, bis 24 Uhr'}
+  else if(d!==0){st.textContent='Heute ab 17 Uhr geöffnet';st.classList.add('closed')}
+  else{st.textContent='Heute geschlossen, morgen ab 17 Uhr';st.classList.add('closed')}
+
+  // v2 ---------- Leben und Persönlichkeit
+  var calm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var g=document.getElementById('greet');
+  g.textContent=h<11?'Guten Morgen, heute Abend schon etwas vor?':h<17?'Schön, dass Sie da sind. Bis heute Abend?':h<22?'Guten Abend, wir haben noch Platz für Sie.':'Noch wach? Morgen wartet ein Tisch.';
+  if(d===0)g.textContent='Sonntag ist unser Ruhetag. Ab Montag wieder für Sie da.';
+  var live=document.getElementById('live');
+  if(d!==0&&h>=17){live.lastElementChild.textContent='Jetzt geöffnet'}
+  else{live.classList.add('off');live.lastElementChild.textContent=d===0?'Morgen ab 17 Uhr':'Heute ab 17 Uhr'}
+
+  var tips=[null,
+    ['Tagliatelle hausgemacht','Täglich frisch, mit der Sauce der Saison.'],
+    ['Risotto Nero','Mit gebratenem Oktopus. Unser Klassiker.'],
+    ['Branzino','Wolfsbarsch im Ganzen gebraten, mit Fenchel und Zitrone.'],
+    ['Ravioli','Ricotta und Spinat in Salbeibutter.'],
+    ['Tagliata vom Rind','Mit Rucola, Kirschtomaten und Rosmarinkartoffeln.'],
+    ['Bellini Prosecco','Der richtige Start in den Samstagabend.']];
+  var t=tips[d]||tips[2];
+  document.getElementById('tipName').textContent=t[0];
+  document.getElementById('tipText').textContent=t[1];
+  if(d===0)document.querySelector('#tip .stamp').innerHTML='Tipp für<br>Montag';
+
+  var bar=document.getElementById('progress'),toTop=document.getElementById('toTop'),tick=false;
+  function onScroll(){tick=false;var max=document.documentElement.scrollHeight-innerHeight;bar.style.transform='scaleX('+(max>0?scrollY/max:0)+')';toTop.classList.toggle('show',scrollY>700)}
+  addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(onScroll)}},{passive:true});
+  toTop.addEventListener('click',function(){scrollTo({top:0,behavior:calm?'auto':'smooth'})});
+
+  var links=[].slice.call(document.querySelectorAll('.nav a[href^="#"]:not(.btn)'));
+  if('IntersectionObserver' in window){
+    var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)links.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id)})})},{rootMargin:'-45% 0px -50% 0px'});
+    links.forEach(function(a){var s=document.querySelector(a.getAttribute('href'));if(s)so.observe(s)});
+    var co=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(!e.isIntersecting)return;co.unobserve(e.target);
+      var el=e.target,end=+el.dataset.count,suf=el.dataset.suffix||'',from=end>100?end-16:0,t0=null;
+      if(calm)return;
+      requestAnimationFrame(function step(ts){t0=t0||ts;var k=Math.min((ts-t0)/1100,1);k=1-Math.pow(1-k,3);el.textContent=Math.round(from+(end-from)*k)+suf;if(k<1)requestAnimationFrame(step)});
+    })},{threshold:.6});
+    document.querySelectorAll('[data-count]').forEach(function(el){co.observe(el)});
+  }
+
+  var hero=document.getElementById('top'),tilt=document.getElementById('tilt');
+  if(!calm&&matchMedia('(hover:hover)').matches){
+    hero.addEventListener('pointermove',function(e){var r=hero.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;tilt.style.transform='translate('+(x*-22)+'px,'+(y*-16)+'px) rotate('+(x*5)+'deg)'});
+    hero.addEventListener('pointerleave',function(){tilt.style.transform=''});
+  }
+
+  // Form
+  var f=document.getElementById('form'),date=document.getElementById('date');
+  var iso=function(x){return x.getFullYear()+'-'+('0'+(x.getMonth()+1)).slice(-2)+'-'+('0'+x.getDate()).slice(-2)};
+  date.min=iso(now);
+  function check(el,ok){el.closest('.field').classList.toggle('bad',!ok);el.setAttribute('aria-invalid',!ok);return ok}
+  function vDate(){var v=date.value;return check(date,!!v&&v>=date.min&&new Date(v+'T12:00').getDay()!==0)}
+  function vReq(id){var el=document.getElementById(id);return check(el,el.value.trim().length>1)}
+  date.addEventListener('blur',vDate);
+  ['name','phone'].forEach(function(id){document.getElementById(id).addEventListener('blur',function(){vReq(id)})});
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var a=vDate(),b=vReq('name'),c=vReq('phone');
+    if(!(a&&b&&c)){f.querySelector('.bad input,.bad select').focus();return}
+    var v=function(id){return document.getElementById(id).value};
+    var dt=new Date(v('date')+'T12:00').toLocaleDateString('de-AT',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+    var body='Guten Tag,\n\nich möchte gern einen Tisch reservieren:\n\nDatum: '+dt+'\nUhrzeit: '+v('time')+' Uhr\nPersonen: '+v('guests')+'\nName: '+v('name')+'\nTelefon: '+v('phone')+(v('msg')?'\nWünsche: '+v('msg'):'')+'\n\nVielen Dank!';
+    location.href='mailto:office@philigrano.at?subject='+encodeURIComponent('Tischreservierung '+dt+', '+v('time')+' Uhr')+'&body='+encodeURIComponent(body);
+    document.getElementById('ok').classList.add('show');
+  });
+})();
+</script>
+</body>
+</html>

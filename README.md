@@ -8,6 +8,7 @@ Website-Entwürfe von Rinor für Betriebe in Wien. Jeder Ordner ist eine eigenst
 | Pinsatore | Pinsatore, 1040 Wien |
 | Quick Yammy | Quick Yammy, Asia-Imbiss 1040 Wien |
 | Stella | STELLA am Naschmarkt |
+| Philigrano | Ristorante Philigrano, 1010 Wien |
 | Zsom | ZSOM Restaurant, 1040 Wien |
 | Werbung | Visitenkarte und Flyer |
 
